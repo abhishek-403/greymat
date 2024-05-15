@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+html,body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
   overflow: auto;
- }
+}
+body {
+  background-size: 50px 50px;
+  background-image: radial-gradient(
+    circle,
+    #ffffff4a 1px,
+    rgba(0, 0, 0, 0) 1px
+  );
+
+  background-color: rgb(0, 0, 0);
+}

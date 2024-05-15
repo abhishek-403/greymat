@@ -1,8 +1,17 @@
+import HeroSection from "../components/home/HeroSection";
+import Navbar from "../components/navbar/Navbar";
 
-type Props = {}
+type Props = {};
 
 export default function Home({}: Props) {
   return (
-    <div>Home</div>
-  )
+    <div className="">
+      <Navbar />
+      <div className="px-4">
+        <HeroSection />
+      </div>
+      <div>
+      </div>
+    </div>
+  );
 }
