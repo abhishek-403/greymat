@@ -5,7 +5,7 @@ import webimg from "../assets/webimg-removebg-preview.png";
 import contentimg from "../assets/contentmarketing-removebg-preview.png";
 import socialimg from "../assets/socialimg-removebg-preview.png";
 import influimg from "../assets/influencerimg-removebg-preview.png";
-import { GradientText } from "../../pages/Home";
+import { GradientText, SecGadientText } from "../../pages/Home";
 
 type CardProps = {
   img: string;
@@ -94,7 +94,7 @@ function Card({ img, title, brief }: CardProps) {
         />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <h1 className="font-cataram text-3xl font-bold capitalize">{title}</h1>
+        <SecGadientText className="font-cataram text-3xl font-extrabold capitalize ">{title}</SecGadientText>
         <span className="text-[var(--accents-5)] font-poppins p-2 text-base">
           {brief}
         </span>

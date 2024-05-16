@@ -13,13 +13,13 @@ let words =
 export default function HeroSection({}: Props) {
   return (
     <div
-      style={{
-        backgroundImage: `url(${bgnet})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center center ",
-      }}
-     
-      className="relative flex justify-between px-24 gap-2 text-white z-100 "
+      // style={{
+      //   backgroundImage: `url(${bgnet})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center center ",
+      // }}
+
+      className="relative flex justify-between px-24 gap-2 text-white z-100 mt-[50px]  w-full"
     >
       <div className="font-catamaran flex flex-col gap-2 w-[800px]">
         <div className="font-bold text-5xl flex gap-3 mt-20 ">
@@ -37,7 +37,7 @@ export default function HeroSection({}: Props) {
         </div>
       </div>
       <div className="w-[500px]  ">
-        <img src={bg} alt="bg" />
+        <img src={bg} alt="bg" className="object-cover" />
       </div>
     </div>
   );

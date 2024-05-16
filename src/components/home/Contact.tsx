@@ -14,14 +14,14 @@ type Props = {};
 
 export default function Contact({}: Props) {
   return (
-    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-4">
+    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-6">
       <div>
         <h1 className="">
           <GradientText>Contact Us</GradientText>
         </h1>
         <h6 className="">React out to us</h6>
       </div>
-      <div className="flex gap-4 items-center justify-between px-20">
+      <div className="flex gap-12 items-center justify-between px-20">
         <div className="">
           <img src={contactimg} alt=""  className="object-fill w-[35vw]" />
         </div>
@@ -39,7 +39,7 @@ export function ContactBox() {
     console.log("Form submitted");
   };
   return (
-    <div className="  mx-auto rounded-none md:rounded-2xl px-4 md:px-8 shadow-input bg-white dark:bg-black">
+    <div className="py-2  mx-auto rounded-none md:rounded-2xl px-4 md:px-8 shadow-input bg-white dark:bg-black">
       <form className="my-8 flex flex-col gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col  md:flex-row space-y-10 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>

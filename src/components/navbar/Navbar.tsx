@@ -3,7 +3,7 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <div className="flex justify-between p-8 px-20 items-center ">
+    <div className="flex bg-black justify-between mt-2 py-2 px-20 items-center sticky z-[100] top-0 rounded-full ">
       <div>
         <img src={logo} alt="logo" className="w-[80px] " />
       </div>
