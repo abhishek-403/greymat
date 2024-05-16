@@ -12,28 +12,32 @@ let words =
 
 export default function HeroSection({}: Props) {
   return (
-    <div className="h-[30rem] w-full dark:bg-black bg-white  dark:bg-dot-white/[0.4] bg-dot-black/[0.3] relative flex items-center justify-center">
-      {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-      <div className="relative flex justify-between px-16 gap-2 text-white  ">
-        <div className="font-poppins flex flex-col gap-4 w-[800px]">
-          <div className="font-bold text-5xl flex gap-3 mt-20 ">
-            <span className="">Unlock Your Brand's </span>
-            <TextComponent />
-          </div>
-          <div className="font-semibold font-cataram text-xl opacity-70 ">
-            <span>
-              <TextGenerateEffect words={words} />
-            </span>
-          </div>
+    <div
+      style={{
+        backgroundImage: `url(${bgnet})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center ",
+      }}
+     
+      className="relative flex justify-between px-24 gap-2 text-white z-100 "
+    >
+      <div className="font-catamaran flex flex-col gap-2 w-[800px]">
+        <div className="font-bold text-5xl flex gap-3 mt-20 ">
+          <span className="">Unlock Your Brand's </span>
+          <TextComponent />
+        </div>
+        <div className="font-semibold font-cataram text-xl opacity-70 ">
+          <span>
+            <TextGenerateEffect words={words} />
+          </span>
+        </div>
 
-          <div className="px-3 mt-10">
-            <PrimaryButton title="Get started" />
-          </div>
+        <div className=" mt-8">
+          <PrimaryButton title="Get started" />
         </div>
-        <div className="w-[500px]  ">
-          <img src={bg} alt="bg" />
-        </div>
+      </div>
+      <div className="w-[500px]  ">
+        <img src={bg} alt="bg" />
       </div>
     </div>
   );

@@ -55,10 +55,10 @@ const services: CardProps[] = [
 ];
 export default function Services({}: Props) {
   return (
-    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col">
+    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-10">
       <div className="my-6">
         <h1>
-          <GradientText>Serives</GradientText> we offer
+          <GradientText>Serives we offer</GradientText>
         </h1>
         <h6>How diverse we are</h6>
       </div>
