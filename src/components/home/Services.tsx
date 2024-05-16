@@ -5,8 +5,8 @@ import webimg from "../assets/webimg-removebg-preview.png";
 import contentimg from "../assets/contentmarketing-removebg-preview.png";
 import socialimg from "../assets/socialimg-removebg-preview.png";
 import influimg from "../assets/influencerimg-removebg-preview.png";
+import { GradientText } from "../../pages/Home";
 
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 type CardProps = {
   img: string;
   title: string;
@@ -55,12 +55,17 @@ const services: CardProps[] = [
 ];
 export default function Services({}: Props) {
   return (
-    <div className="text-white px-10 mb-10 w-full flex  items-center">
+    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col">
+      <div className="my-6">
+        <h1>
+          <GradientText>Serives</GradientText> we offer
+        </h1>
+        <h6>How diverse we are</h6>
+      </div>
       <div className="grid grid-cols-3  gap-10 items-center justify-center mx-auto w-full ">
         {services.map((ser) => (
           <div className="mx-auto">
-
-          <Card {...ser} />
+            <Card {...ser} />
           </div>
         ))}
       </div>
@@ -83,8 +88,8 @@ function Card({ img, title, brief }: CardProps) {
           alt=""
           className="bg-transparent "
           style={{
-            objectFit:'cover',
-            height:180
+            objectFit: "cover",
+            height: 180,
           }}
         />
       </div>

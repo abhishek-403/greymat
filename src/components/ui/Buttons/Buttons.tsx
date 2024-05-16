@@ -6,7 +6,7 @@ type Props = {
 
 export default function PrimaryButton({ title, link }: Props) {
   return (
-    <section className="buttons button-body ">
+    <section className="buttons button-body flex ">
       <div className="container">
         <a href={link?link:'#'} className="btn btn-1">
           <svg>

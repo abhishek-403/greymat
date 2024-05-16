@@ -57,3 +57,18 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #474747;
 }
+
+h1 {
+  font-size:xxx-large;
+  font-weight: bold;
+  font-family: "Poppins";
+  text-align: center;
+
+}
+h6{
+  font-family: "Catamaran";
+  font-weight: 600;
+  font-size: x-large;
+  text-align: center;
+  opacity:70%;
+}

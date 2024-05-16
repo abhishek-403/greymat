@@ -3,38 +3,37 @@ import TextTransition, { presets } from "react-text-transition";
 import bg from "../assets/bg2.png";
 import bgnet from "../assets/bgnet.png";
 import PrimaryButton from "../ui/Buttons/Buttons";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { GradientText } from "../../pages/Home";
 
 type Props = {};
+let words =
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunterror ullam laboriosam magni voluptate voluptatum repellendus suscipit nihil recusandae, eius minus, nesciunt omnis et rem iste ea accusantium ut qui";
 
 export default function HeroSection({}: Props) {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${bgnet})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center center ",
-      }}
-      className="relative flex justify-between px-16 gap-2 text-white  "
-    >
-      <div className="font-catamaran flex flex-col gap-6 w-[800px]">
-        <div className="font-semibold text-5xl flex gap-3 mt-20 ">
-          <span>Unlock Your Brand's </span>
-        </div>
-        <div className="font-semibold text-xl ">
-          <span>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt error
-            ullam laboriosam magni voluptate voluptatum repellendus suscipit
-            nihil recusandae, eius minus, nesciunt omnis et rem iste ea
-            accusantium ut quis!{" "}
-          </span>
-        </div>
+    <div className="h-[30rem] w-full dark:bg-black bg-white  dark:bg-dot-white/[0.4] bg-dot-black/[0.3] relative flex items-center justify-center">
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="relative flex justify-between px-16 gap-2 text-white  ">
+        <div className="font-poppins flex flex-col gap-4 w-[800px]">
+          <div className="font-bold text-5xl flex gap-3 mt-20 ">
+            <span className="">Unlock Your Brand's </span>
+            <TextComponent />
+          </div>
+          <div className="font-semibold font-cataram text-xl opacity-70 ">
+            <span>
+              <TextGenerateEffect words={words} />
+            </span>
+          </div>
 
-        <div>
-          <PrimaryButton title="Get started" />
+          <div className="px-3 mt-10">
+            <PrimaryButton title="Get started" />
+          </div>
         </div>
-      </div>
-      <div className="w-[500px]  ">
-        <img src={bg} alt="bg" />
+        <div className="w-[500px]  ">
+          <img src={bg} alt="bg" />
+        </div>
       </div>
     </div>
   );
@@ -51,10 +50,38 @@ const TextComponent = () => {
   }, []);
 
   return (
-    <span className=" text-blue-400 bg-radiant-r  ">
-      <TextTransition springConfig={presets.wobbly}>
-        {TEXTS[index % TEXTS.length]}
-      </TextTransition>
-    </span>
+    <TextTransition springConfig={presets.wobbly} className="">
+      <GradientText>{TEXTS[index % TEXTS.length]}</GradientText>
+    </TextTransition>
   );
 };
+
+// <div
+//   style={{
+//     backgroundImage: `url(${bgnet})`,
+//     backgroundSize: "cover",
+//     backgroundPosition: "center center ",
+//   }}
+//   className="relative flex justify-between px-16 gap-2 text-white  "
+// >
+//   <div className="font-catamaran flex flex-col gap-6 w-[800px]">
+//     <div className="font-semibold text-5xl flex gap-3 mt-20 ">
+//       <span>Unlock Your Brand's </span>
+//     </div>
+//     <div className="font-semibold text-xl ">
+//       <span>
+//         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt error
+//         ullam laboriosam magni voluptate voluptatum repellendus suscipit
+//         nihil recusandae, eius minus, nesciunt omnis et rem iste ea
+//         accusantium ut quis!{" "}
+//       </span>
+//     </div>
+
+//     <div>
+//       <PrimaryButton title="Get started" />
+//     </div>
+//   </div>
+//   <div className="w-[500px]  ">
+//     <img src={bg} alt="bg" />
+//   </div>
+// </div>
