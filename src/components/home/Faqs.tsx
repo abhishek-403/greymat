@@ -55,7 +55,7 @@ export default function FAQS({}: Props) {
           <h6 className="">Still having doubts</h6>
         </div>
         <div className="text-white flex   ">
-          <div className=" max-h-[30rem] overflow-auto px-4 ">
+          <div className=" w-[45rem] max-h-[35rem] overflow-auto px-4 ">
             <Accordion defaultIndex={[0]} allowMultiple>
               <div className="flex flex-col gap-10">
                 {accord.map((item: AccordionCardProps) => (
@@ -64,8 +64,8 @@ export default function FAQS({}: Props) {
               </div>
             </Accordion>
           </div>
-          <div>
-            <img src={faqimg} alt="" className="w-[100rem]" />
+          <div className="flex items-center justify-center">
+            <img src={faqimg} alt="" className="max-w-[100rem]" />
           </div>
         </div>
       </div>

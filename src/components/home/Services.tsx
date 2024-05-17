@@ -10,6 +10,7 @@ type CardProps = {
   img: string;
   title: string;
   brief: string;
+  i?:number
 };
 type Props = {};
 
@@ -63,16 +64,16 @@ export default function Services({}: Props) {
         </h1>
       </div>
       <div className="grid grid-cols-3  gap-10 items-center justify-center mx-auto w-full ">
-        {services.map((ser) => (
+        {services.map((ser,i) => (
           <div className="mx-auto">
-            <Card {...ser} />
+            <Card {...ser} i ={i}   />
           </div>
         ))}
       </div>
     </div>
   );
 }
-function Card({ img, title, brief }: CardProps) {
+function Card({ img, title, brief}:CardProps,i:number) {
   return (
     <div
       style={{
@@ -81,7 +82,7 @@ function Card({ img, title, brief }: CardProps) {
           "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
       }}
       className="flex flex-col w-[400px] min-h-[450px] border-2 border-[#1f1f1f] p-6 gap-4"
-    >
+>
       <div className="flex items-center justify-center p-2 object-cover">
         <img
           src={img}

@@ -11,7 +11,7 @@ type Props = {};
 
 export default function Home({}: Props) {
   return (
-    <div className="relative ">
+    <div className="relative " >
       <Navbar />
 
       <div className="w-full h-full flex flex-col gap-8 relative ">
@@ -51,7 +51,7 @@ export function TerGradientText({ children, className }: any) {
   return (
     <span
       className={cn(
-        `bg-gradient-to-l  from-orange-300 to-white   text-transparent bg-clip-text`,
+        `bg-gradient-to-r  from-violet-300 to-white   text-transparent bg-clip-text`,
         className
       )}
     >

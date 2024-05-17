@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home"; 
+import "animate.css/animate.compat.css";
 
-function App() {
+function App() { 
   return (
     <>
       <Routes>

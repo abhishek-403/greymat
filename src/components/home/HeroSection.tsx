@@ -4,8 +4,14 @@ import bg from "../assets/bg2.png";
 import bgnet from "../assets/bgnet.png";
 import PrimaryButton from "../ui/Buttons/Buttons";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { BottomGlow, GradientText, SecGadientText, TerGradientText } from "../../pages/Home";
+import {
+  BottomGlow,
+  GradientText,
+  SecGadientText,
+  TerGradientText,
+} from "../../pages/Home";
 // import Arrow from "../ui/icons/arrow.svg";
+
 type Props = {};
 let words =
   "Partner with a leading digital marketing agency to increase brand awareness, reach your target audience & grow your business online.";
@@ -64,13 +70,12 @@ export default function HeroSection({}: Props) {
             </li>
           </ul>
         </div>
-        
 
         <div className="ml-4 mt-6">
           <PrimaryButton title="Get started" />
         </div>
       </div>
-      <div className="w-[600px]  ">
+      <div className="w-[550px]  " data-aos="fade-right">
         <img src={bg} alt="bg" className="object-cover" />
       </div>
     </div>
@@ -94,7 +99,7 @@ const TextComponent = () => {
   );
 };
 
-function Arrow (){
+function Arrow() {
   return (
     <svg
       width="20"

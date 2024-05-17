@@ -16,7 +16,8 @@ body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  overflow: auto;
+  overflow:auto;
+  overflow-x: hidden;
 }
 body {
   /* background-size: 50px 50px;
