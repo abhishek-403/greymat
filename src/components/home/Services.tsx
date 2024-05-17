@@ -1,10 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import seoimg from "../assets/seoimg2.png";
-import webimg from "../assets/webimg-removebg-preview.png";
-import contentimg from "../assets/contentmarketing-removebg-preview.png";
-import socialimg from "../assets/socialimg-removebg-preview.png";
-import influimg from "../assets/influencerimg-removebg-preview.png";
+import webimg from "../assets/webimg.png";
+import contentimg from "../assets/contentmarketing.png";
+import socialimg from "../assets/socialimg.png";
+import influimg from "../assets/influencerimg.png";
 import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
 
 type CardProps = {
@@ -59,7 +58,7 @@ export default function Services({}: Props) {
       <div className="my-6 ">
         <h1 className="">
           <GradientText>Serives we offer</GradientText>
-          <BottomGlow/>
+          <BottomGlow />
           <h6>How diverse we are</h6>
         </h1>
       </div>
