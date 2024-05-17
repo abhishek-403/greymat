@@ -8,7 +8,7 @@ import {
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
 import contactimg from "../assets/contactimg.png";
-import { GradientText } from "../../pages/Home";
+import { BottomGlow, GradientText } from "../../pages/Home";
 
 type Props = {};
 
@@ -18,6 +18,7 @@ export default function Contact({}: Props) {
       <div>
         <h1 className="">
           <GradientText>Contact Us</GradientText>
+          <BottomGlow/>
         </h1>
         <h6 className="">React out to us</h6>
       </div>

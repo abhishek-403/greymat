@@ -5,7 +5,7 @@ import webimg from "../assets/webimg-removebg-preview.png";
 import contentimg from "../assets/contentmarketing-removebg-preview.png";
 import socialimg from "../assets/socialimg-removebg-preview.png";
 import influimg from "../assets/influencerimg-removebg-preview.png";
-import { GradientText, SecGadientText } from "../../pages/Home";
+import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
 
 type CardProps = {
   img: string;
@@ -56,11 +56,12 @@ const services: CardProps[] = [
 export default function Services({}: Props) {
   return (
     <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-10">
-      <div className="my-6">
-        <h1>
+      <div className="my-6 ">
+        <h1 className="">
           <GradientText>Serives we offer</GradientText>
+          <BottomGlow/>
+          <h6>How diverse we are</h6>
         </h1>
-        <h6>How diverse we are</h6>
       </div>
       <div className="grid grid-cols-3  gap-10 items-center justify-center mx-auto w-full ">
         {services.map((ser) => (
@@ -94,7 +95,9 @@ function Card({ img, title, brief }: CardProps) {
         />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <SecGadientText className="font-cataram text-3xl font-extrabold capitalize ">{title}</SecGadientText>
+        <SecGadientText className="font-cataram text-3xl font-extrabold capitalize ">
+          {title}
+        </SecGadientText>
         <span className="text-[var(--accents-5)] font-poppins p-2 text-base">
           {brief}
         </span>

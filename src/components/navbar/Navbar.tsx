@@ -1,28 +1,32 @@
+import { BottomGlow } from "../../pages/Home";
 import logo from "../assets/logo.png";
 type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <div className="flex bg-black justify-between mt-2 py-2 px-20 items-center sticky z-[100] top-0 rounded-full ">
-      <div>
-        <img src={logo} alt="logo" className="w-[80px] " />
+    <div className="flex flex-col sticky top-0 w-full z-[100] mt-2">
+      <div className="flex bg-black justify-between  py-2 px-20 items-center  top-0 rounded-full ">
+        <div>
+          <img src={logo} alt="logo" className="w-[60px] " />
+        </div>
+        <div>
+          <ul className="flex flex-row gap-10  text-lg cursor-pointer mr-10">
+            <li className="">
+              <TextBox>About</TextBox>
+            </li>
+            <li className="">
+              <TextBox>Contact</TextBox>
+            </li>
+            <li className="">
+              <TextBox>Services</TextBox>
+            </li>
+            <li className="">
+              <TextBox>Work</TextBox>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <ul className="flex flex-row gap-10  text-lg cursor-pointer mr-10">
-          <li className="">
-            <TextBox>About</TextBox>
-          </li>
-          <li className="">
-            <TextBox>Contact</TextBox>
-          </li>
-          <li className="">
-            <TextBox>Services</TextBox>
-          </li>
-          <li className="">
-            <TextBox>Work</TextBox>
-          </li>
-        </ul>
-      </div>
+      {/* <BottomGlow/> */}
     </div>
   );
 }

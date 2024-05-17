@@ -1,6 +1,7 @@
 import Contact from "../components/home/Contact";
 import HeroSection from "../components/home/HeroSection";
 import Services from "../components/home/Services";
+import Testimonials from "../components/home/Testimonials";
 import Navbar from "../components/navbar/Navbar";
 import { SparklesCore } from "../components/ui/Sparkles";
 import { cn } from "../utils/cn";
@@ -11,6 +12,8 @@ export default function Home({}: Props) {
   return (
     <div className="relative">
       <Navbar />
+     
+
       <div className="w-full flex flex-col gap-8 relative ">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -23,6 +26,7 @@ export default function Home({}: Props) {
         />
         <HeroSection />
         <Services />
+        <Testimonials />
         <Contact />
       </div>
     </div>
@@ -51,5 +55,15 @@ export function SecGadientText({ children, className }: any) {
     >
       {children}
     </span>
+  );
+}
+export function BottomGlow() {
+  return (
+    <div className="relative ">
+      <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+      <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+      <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+      <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+    </div>
   );
 }
