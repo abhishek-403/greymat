@@ -5,14 +5,81 @@ import contentimg from "../assets/contentmarketing.png";
 import socialimg from "../assets/socialimg.png";
 import influimg from "../assets/influencerimg.png";
 import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
-
+import ScrollAnimation from "react-animate-on-scroll";
+import { motion } from "framer-motion";
 type CardProps = {
   img: string;
   title: string;
   brief: string;
-  i?:number
+  i?: number;
 };
 type Props = {};
+
+export default function Services({}: Props) {
+  return (
+    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-10">
+      <div className="my-6 ">
+        <h1 className="">
+          <GradientText>Serives we offer</GradientText>
+          <BottomGlow />
+          <h6>How diverse we are</h6>
+        </h1>
+      </div>
+      <div className="grid grid-cols-3  gap-10 items-center justify-center mx-auto w-full ">
+        {services.map((ser, i) => {
+          let prop = { ...ser, i };
+          return (
+            <div className="mx-auto" key={i}>
+              <Card {...prop} />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+function Card({ img, title, brief, i }: CardProps) {
+  let pos = 0;
+  pos = (i! ) % 3;
+  console.log("sd", i);
+
+  return (
+    <motion.div
+      style={{
+        background: "linear-gradient(180deg, #242424, #121212 65.62%)",
+        boxShadow:
+          "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
+      }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={{
+        opacity: 0,
+        x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
+        y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
+      }}
+      className="transition-all duration-75 flex flex-col w-[400px] min-h-[450px] border-2 border-[#343434] p-6 gap-4"
+    >
+      <div className="flex items-center justify-center p-2 object-cover">
+        <img
+          src={img}
+          alt=""
+          className="bg-transparent "
+          style={{
+            objectFit: "cover",
+            height: 180,
+          }}
+        />
+      </div>
+      <div className="flex flex-col items-center justify-center">
+        <SecGadientText className="font-cataram text-3xl font-extrabold capitalize ">
+          {title}
+        </SecGadientText>
+        <span className="text-[var(--accents-5)] font-poppins p-2 text-base">
+          {brief}
+        </span>
+      </div>
+    </motion.div>
+  );
+}
 
 const services: CardProps[] = [
   {
@@ -53,55 +120,3 @@ const services: CardProps[] = [
       "SEO involves strategies to improve a website's visibility in search results pages to attract more traffic. It includes optimizing website content, meta tags, etc. to rank higher for search queries.",
   },
 ];
-export default function Services({}: Props) {
-  return (
-    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-10">
-      <div className="my-6 ">
-        <h1 className="">
-          <GradientText>Serives we offer</GradientText>
-          <BottomGlow />
-          <h6>How diverse we are</h6>
-        </h1>
-      </div>
-      <div className="grid grid-cols-3  gap-10 items-center justify-center mx-auto w-full ">
-        {services.map((ser,i) => (
-          <div className="mx-auto">
-            <Card {...ser} i ={i}   />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-function Card({ img, title, brief}:CardProps,i:number) {
-  return (
-    <div
-      style={{
-        background: "linear-gradient(180deg, #242424, #121212 65.62%)",
-        boxShadow:
-          "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
-      }}
-      className="flex flex-col w-[400px] min-h-[450px] border-2 border-[#1f1f1f] p-6 gap-4"
->
-      <div className="flex items-center justify-center p-2 object-cover">
-        <img
-          src={img}
-          alt=""
-          className="bg-transparent "
-          style={{
-            objectFit: "cover",
-            height: 180,
-          }}
-        />
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <SecGadientText className="font-cataram text-3xl font-extrabold capitalize ">
-          {title}
-        </SecGadientText>
-        <span className="text-[var(--accents-5)] font-poppins p-2 text-base">
-          {brief}
-        </span>
-      </div>
-    </div>
-  );
-}
