@@ -1,12 +1,11 @@
-import "swiper/css";
-import seoimg from "../assets/seoimg2.png";
-import webimg from "../assets/webimg.png";
-import contentimg from "../assets/contentmarketing.png";
-import socialimg from "../assets/socialimg.png";
-import influimg from "../assets/influencerimg.png";
-import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
-import ScrollAnimation from "react-animate-on-scroll";
 import { motion } from "framer-motion";
+import "swiper/css";
+import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
+import contentimg from "../assets/contentmarketing.png";
+import influimg from "../assets/influencerimg.png";
+import seoimg from "../assets/seoimg2.png";
+import socialimg from "../assets/socialimg.png";
+import webimg from "../assets/webimg.png";
 type CardProps = {
   img: string;
   title: string;
