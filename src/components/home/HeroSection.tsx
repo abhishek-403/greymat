@@ -1,19 +1,14 @@
+import { motion } from "framer-motion";
 import React from "react";
 import TextTransition, { presets } from "react-text-transition";
-import bg from "../assets/bg2.png";
-import bgnet from "../assets/bgnet.png";
-import PrimaryButton from "../ui/Buttons/Buttons";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
 import {
   BottomGlow,
   GradientText,
-  SecGadientText,
-  TerGradientText,
+  TerGradientText
 } from "../../pages/Home";
-import { motion } from "framer-motion";
+import bg from "../assets/bg2.png";
+import PrimaryButton from "../ui/Buttons/Buttons";
 type Props = {};
-let words =
-  "Partner with a leading digital marketing agency to increase brand awareness, reach your target audience & grow your business online.";
 
 export default function HeroSection({}: Props) {
   return (

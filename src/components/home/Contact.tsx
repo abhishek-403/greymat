@@ -1,16 +1,10 @@
-import React from "react";
-import { Label } from "../ui/label";
-import { Input, TextArea } from "../ui/input";
-import { cn } from "../../utils/cn";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
-import contactimg from "../assets/contactimg.png";
-import { BottomGlow, GradientText } from "../../pages/Home";
-import ScrollAnimation from "react-animate-on-scroll";
 import { motion } from "framer-motion";
+import React from "react";
+import { BottomGlow, GradientText } from "../../pages/Home";
+import { cn } from "../../utils/cn";
+import contactimg from "../assets/contactimg.png";
+import { Input, TextArea } from "../ui/input";
+import { Label } from "../ui/label";
 type Props = {};
 
 export default function Contact({}: Props) {

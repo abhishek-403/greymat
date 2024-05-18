@@ -1,22 +1,22 @@
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
-  AccordionPanel,
   AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
   ChakraProvider,
 } from "@chakra-ui/react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 import { BottomGlow, GradientText } from "../../pages/Home";
+import faqimg from "../assets/faq.png";
 
 type Props = {};
 type AccordionCardProps = {
   title: string;
   content: string;
 };
-import { motion, useAnimation, useInView } from "framer-motion";
-import faqimg from "../assets/faq.png";
-import { useEffect, useRef, useState } from "react";
 
 export default function FAQS({}: Props) {
   const [hasAnimated, setHasAnimated] = useState(false);

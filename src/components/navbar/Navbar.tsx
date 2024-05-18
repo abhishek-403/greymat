@@ -1,4 +1,3 @@
-import { BottomGlow } from "../../pages/Home";
 import logo from "../assets/logo.png";
 type Props = {};
 
