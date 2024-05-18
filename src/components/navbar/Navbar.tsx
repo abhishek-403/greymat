@@ -4,12 +4,12 @@ type Props = {};
 export default function Navbar({}: Props) {
   return (
     <div className="flex flex-col sticky top-0 w-full z-[100] mt-2">
-      <div className="flex bg-black justify-between  py-2 px-20 items-center  top-0 rounded-full ">
+      <div className="flex bg-black justify-between  py-2 px-2 sm:px-20 items-center  top-0 rounded-full ">
         <div>
           <img src={logo} alt="logo" className="w-[60px] " />
         </div>
         <div>
-          <ul className="flex flex-row gap-10  text-lg cursor-pointer mr-10">
+          <ul className="hidden sm:flex flex-row gap-10  text-lg cursor-pointer mr-10">
             <li className="">
               <TextBox>About</TextBox>
             </li>

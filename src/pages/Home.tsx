@@ -14,7 +14,7 @@ export default function Home({}: Props) {
     <div className="relative " >
       <Navbar />
 
-      <div className="w-full h-full flex flex-col gap-8 relative ">
+      <div className="w-full h-full flex flex-col gap-10 relative overflow-x-hidden">
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"

@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Testimonials({}: Props) {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center overflow-x-hidden">
       <div>
         <h1 className="w-fit">
           <GradientText>Testimonials</GradientText>

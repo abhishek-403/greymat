@@ -20,15 +20,15 @@ export default function HeroSection({}: Props) {
           // backgroundPosition: "center center ",
         }
       }
-      className="relative  flex justify-between px-24 gap-2 text-white z-100 mt-[50px]  w-full"
+      className="relative  flex justify-between mt-4 sm:mt-0 sm:px-24 px-8 gap-2 text-white z-100 lg:mt-[50px] items-center w-full flex-col-reverse lg:flex-row"
     >
-      <div className="font-catamaran flex flex-col gap-8 w-[800px]  text-left">
-        <div className="font-bold text-5xl flex gap-3 mt-20 transition-all duration-75 ">
+      <div className="font-catamaran flex flex-col gap-4 lg:gap-8 sm:w-[800px]  text-left">
+        <div className="font-bold text-2xl sm:text-3xl  lg:text-5xl flex gap-3 lg:mt-20 mt-10 transition-all duration-75 ">
           <span className="">Unlock Your Brand's </span>
           <TextComponent />
         </div>
         <div>
-          <p className="font-poppins text-lg w-[90%]">
+          <p className="font-poppins text-base lg:text-lg w-[90%]">
             Partner with a leading digital marketing agency to increase brand
             awareness, reach your target audience & grow your business online.
           </p>
@@ -39,7 +39,7 @@ export default function HeroSection({}: Props) {
               <span className="text-blue-400 font-extrabold ">
                 <Arrow />
               </span>
-              <TerGradientText className="text-2xl opacity-80 font-extrabold">
+              <TerGradientText className="text-base lg:text-2xl opacity-80 font-extrabold">
                 Optimize Targeted Audiences
                 <BottomGlow />
               </TerGradientText>
@@ -48,7 +48,7 @@ export default function HeroSection({}: Props) {
               <span className="text-blue-400 font-extrabold ">
                 <Arrow />
               </span>
-              <TerGradientText className="text-2xl opacity-80 font-extrabold">
+              <TerGradientText className="text-base lg:text-2xl opacity-80 font-extrabold">
                 Generate Qualified Leads
                 <BottomGlow />
               </TerGradientText>
@@ -57,7 +57,7 @@ export default function HeroSection({}: Props) {
               <span className="text-blue-400 font-extrabold ">
                 <Arrow />
               </span>
-              <TerGradientText className="text-2xl opacity-80 font-extrabold">
+              <TerGradientText className="text-base lg:text-2xl opacity-80 font-extrabold">
                 Boost Brand Authority
                 <BottomGlow />
               </TerGradientText>
@@ -71,8 +71,10 @@ export default function HeroSection({}: Props) {
       </div>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: 200 }} className="w-[550px]  ">
-        <img src={bg} alt="bg" className="object-cover" />
+        initial={{ opacity: 0, x: 200 }}
+        className="w-[300px] sm:w-[400px] lg:w-[530px]  "
+      >
+        <img src={bg} alt="bg" className="object-cover   " />
       </motion.div>
     </div>
   );

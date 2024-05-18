@@ -9,7 +9,7 @@ type Props = {};
 
 export default function Contact({}: Props) {
   return (
-    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-6">
+    <div className="text-white px-2 sm:px-20 mb-10 w-full flex  items-center flex-col gap-6">
       <div>
         <h1 className="">
           <GradientText>Contact Us</GradientText>
@@ -17,17 +17,18 @@ export default function Contact({}: Props) {
         </h1>
         <h6 className="">React out to us</h6>
       </div>
-      <div className="transition-all duration-75 flex gap-12 items-center justify-between ">
+      <div className="transition-all duration-75 flex gap-12 items-center justify-between flex-col lg:flex-row ">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -200 }}
           className=""
         >
-          <img src={contactimg} alt="" className="object-fill w-[35vw]" />
+          <img src={contactimg} alt="" className="object-fill w-[300px] sm:w-[35vw] " />
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 200 }}
+          className="w-[340px] sm:w-[100%]"
         >
           <ContactBox />
         </motion.div>

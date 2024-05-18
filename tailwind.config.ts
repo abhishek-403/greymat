@@ -11,18 +11,19 @@ const {
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    
     fontFamily: {
       roboto: ["Roboto Slab", "serif"],
       poppins: ["Poppins", "sans-serif"],
       cataram: ["Catamaran", "sans-serif"],
     },
     extend: {
-      dropShadow: {        
-        'sm': '0 1px 1px rgba(255,255,255,0.8)',
-        '4xl': [
-            '0 35px 35px rgba(0, 0, 0, 0.25)',
-            '0 45px 65px rgba(0, 0, 0, 0.15)'
-        ]
+      dropShadow: {
+        sm: "0 1px 1px rgba(255,255,255,0.8)",
+        "4xl": [
+          "0 35px 35px rgba(0, 0, 0, 0.25)",
+          "0 45px 65px rgba(0, 0, 0, 0.15)",
+        ],
       },
       animation: {
         scroll:

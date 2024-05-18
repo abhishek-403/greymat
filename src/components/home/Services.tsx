@@ -16,7 +16,7 @@ type Props = {};
 
 export default function Services({}: Props) {
   return (
-    <div className="text-white px-20 mb-10 w-full flex  items-center flex-col gap-10">
+    <div className="text-white px-2 lg:px-20 mb-10 w-full flex  items-center flex-col gap-10">
       <div className="my-6 ">
         <h1 className="">
           <GradientText>Serives we offer</GradientText>
@@ -24,7 +24,7 @@ export default function Services({}: Props) {
           <h6>How diverse we are</h6>
         </h1>
       </div>
-      <div className="grid grid-cols-3  gap-10 items-center justify-center mx-auto w-full ">
+      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-10 items-center justify-center mx-auto w-full   ">
         {services.map((ser, i) => {
           let prop = { ...ser, i };
           return (
@@ -55,7 +55,7 @@ function Card({ img, title, brief, i }: CardProps) {
         x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
         y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
       }}
-      className="transition-all duration-75 flex flex-col w-[400px] min-h-[450px] border-2 border-[#343434] p-6 gap-4"
+      className="transition-all duration-75 flex flex-col w-[350px] sm:w-[400px] min-h-[450px] border-2 border-[#343434] p-6 gap-4"
     >
       <div className="flex items-center justify-center p-2 object-cover">
         <img
@@ -69,7 +69,7 @@ function Card({ img, title, brief, i }: CardProps) {
         />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <SecGadientText className="font-cataram text-3xl font-extrabold capitalize ">
+        <SecGadientText className="font-cataram text-2xl sm:text-3xl font-extrabold capitalize ">
           {title}
         </SecGadientText>
         <span className="text-[var(--accents-5)] font-poppins p-2 text-base">
