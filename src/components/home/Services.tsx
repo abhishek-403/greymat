@@ -55,7 +55,7 @@ function Card({ img, title, brief, i }: CardProps) {
         x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
         y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
       }}
-      className="transition-all duration-75 flex flex-col w-[350px] sm:w-[400px] min-h-[450px] border-2 border-[#343434] p-6 gap-4"
+      className="transition-all duration-75 flex flex-col w-[90vw] sm:w-[400px] min-h-[450px] border-2 border-[#343434] p-6 gap-4"
     >
       <div className="flex items-center justify-center p-2 object-cover">
         <img
@@ -63,16 +63,16 @@ function Card({ img, title, brief, i }: CardProps) {
           alt=""
           className="bg-transparent "
           style={{
-            objectFit: "cover",
+            objectFit: "contain",
             height: 180,
           }}
         />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <SecGadientText className="font-cataram text-2xl sm:text-3xl font-extrabold capitalize ">
+        <SecGadientText className="font-cataram text-center text-[24px] sm:text-3xl font-extrabold capitalize ">
           {title}
         </SecGadientText>
-        <span className="text-[var(--accents-5)] font-poppins p-2 text-base">
+        <span className="text-[var(--accents-5)] font-poppins p-2 text-sm">
           {brief}
         </span>
       </div>
