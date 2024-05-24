@@ -37,7 +37,7 @@ export function TextBox({ children }: any) {
       className="group font-medium text-white transition duration-300 hover:text-[#a6a6a6]"
     >
       {children}
-      <span className="block rounded max-w-0 group-hover:max-w-full transition-all duration-200 h-[3px] bg-[#94c1fb]"></span>
+      <span className="block rounded max-w-0 group-hover:max-w-full transition-all duration-200 h-[3px] bg-[#3a8fff]"></span>
     </a>
   );
 }

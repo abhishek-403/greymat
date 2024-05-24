@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import "swiper/css";
 import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
 import contentimg from "../assets/contentmarketing.png";
@@ -6,6 +5,7 @@ import influimg from "../assets/influencerimg.png";
 import seoimg from "../assets/seoimg2.png";
 import socialimg from "../assets/socialimg.png";
 import webimg from "../assets/webimg.png";
+import Tilt from "react-parallax-tilt";
 type CardProps = {
   img: string;
   title: string;
@@ -43,19 +43,27 @@ function Card({ img, title, brief, i }: CardProps) {
   console.log("sd", i);
 
   return (
-    <motion.div
+    <Tilt
+      glareBorderRadius="20"
+      glarePosition="all"
+      tiltMaxAngleY={10}
+      tiltMaxAngleX={10}
+      glareMaxOpacity={0.1}
+      glareEnable
+      
       style={{
+
         background: "linear-gradient(180deg, #242424, #121212 65.62%)",
         boxShadow:
           "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
       }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      initial={{
-        opacity: 0,
-        x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
-        y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
-      }}
-      className="transition-all duration-75 flex flex-col w-[90vw] sm:w-[400px] min-h-[450px] border-2 border-[#343434] p-6 gap-4"
+      // whileInView={{ opacity: 1, x: 0, y: 0 }}
+      // initial={{
+      //   opacity: 0,
+      //   x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
+      //   y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
+      // }}
+      className="cursor-pointer  transition-all duration-75 flex flex-col w-[90vw] sm:w-[400px] min-h-[450px] rounded-xl border-2 border-[#343434] p-6 gap-4"
     >
       <div className="flex items-center justify-center p-2 object-cover">
         <img
@@ -76,7 +84,7 @@ function Card({ img, title, brief, i }: CardProps) {
           {brief}
         </span>
       </div>
-    </motion.div>
+    </Tilt>
   );
 }
 

@@ -11,11 +11,11 @@ type Props = {};
 
 export default function Home({}: Props) {
   return (
-    <div className="relative " >
+    <div className="relative ">
       <Navbar />
 
-      <div className="w-full h-full flex flex-col gap-10 relative overflow-x-hidden">
-        <SparklesCore
+      <div className="w-full h-full flex flex-col  relative overflow-x-hidden">
+        {/* <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
           minSize={0.6}
@@ -23,13 +23,20 @@ export default function Home({}: Props) {
           particleDensity={20}
           className="w-full h-full absolute z-[-1]"
           particleColor="#FFFFFF"
-        />
-        <HeroSection />
-        <Services />
-        <Testimonials />
+        /> */}
 
+        <HeroSection />
+        <div className=" h-full w-full dark:bg-black bg-white  dark:bg-dot-white/[0.3] bg-dot-black/[0.3] relative flex items-center justify-center">
+          {/* Radial gradient for the container to give a faded look */}
+          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+          <div className="gap-12 flex flex-col relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 overflow-auto">
+            <Services />
+            <Testimonials />
+
+            <Contact />
+          </div>
+        </div>
         <FAQS />
-        <Contact />
       </div>
     </div>
   );
@@ -51,7 +58,7 @@ export function TerGradientText({ children, className }: any) {
   return (
     <span
       className={cn(
-        `bg-gradient-to-r  from-violet-300 to-white   text-transparent bg-clip-text`,
+        `bg-gradient-to-l  from-[#a185ff] to-white   text-transparent bg-clip-text`,
         className
       )}
     >

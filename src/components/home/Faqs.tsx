@@ -19,16 +19,10 @@ type AccordionCardProps = {
 };
 
 export default function FAQS({}: Props) {
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  if (isInView && !hasAnimated) {
-    setHasAnimated(true);
-  }
+ 
   return (
     <ChakraWrapper>
-      <div className="flex flex-col px-3 sm:px-20  mb-10 w-full items-center gap-10">
+      <div className="flex flex-col px-3 sm:px-36  mb-10 w-full items-center gap-10">
         <div className="w-fit">
           <h1 className="">
             <GradientText>FAQ's</GradientText>
@@ -39,11 +33,11 @@ export default function FAQS({}: Props) {
         <div className="text-white flex gap-4 sm:gap-0 lg:flex-row  flex-col-reverse   ">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={hasAnimated ? { opacity: 0, x: -200 } : {}}
+            initial={{ opacity: 0, x: -200 }}
             className=" max-h-[40rem] sm:max-h-[30rem] overflow-auto px-4 "
           >
             <Accordion defaultIndex={[0]} allowMultiple>
-              <div className="flex flex-col gap-10 min-w-[45vw]">
+              <div className="flex flex-col gap-10 min-w-[35vw]">
                 {accord.map((item: AccordionCardProps, i) => (
                   <AccordianCard {...item} key={i} />
                 ))}
@@ -58,7 +52,7 @@ export default function FAQS({}: Props) {
             <img
               src={faqimg}
               alt=""
-              className="lg:max-w-[40rem] max-w-[300px] sm:max-w-[35rem] "
+              className="lg:w-[100vw] w-[95vw] sm:w-[45rem] "
             />
           </motion.div>
         </div>
