@@ -43,7 +43,7 @@ export default function FAQS({}: Props) {
             className=" max-h-[40rem] sm:max-h-[30rem] overflow-auto px-4 "
           >
             <Accordion defaultIndex={[0]} allowMultiple>
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-10 w-[100%]">
                 {accord.map((item: AccordionCardProps, i) => (
                   <AccordianCard {...item} key={i} />
                 ))}
