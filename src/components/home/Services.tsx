@@ -1,3 +1,4 @@
+import Tilt from "react-parallax-tilt";
 import "swiper/css";
 import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
 import contentimg from "../assets/contentmarketing.png";
@@ -5,7 +6,6 @@ import influimg from "../assets/influencerimg.png";
 import seoimg from "../assets/seoimg2.png";
 import socialimg from "../assets/socialimg.png";
 import webimg from "../assets/webimg.png";
-import Tilt from "react-parallax-tilt";
 type CardProps = {
   img: string;
   title: string;
@@ -37,10 +37,10 @@ export default function Services({}: Props) {
     </div>
   );
 }
-function Card({ img, title, brief, i }: CardProps) {
-  let pos = 0;
-  pos = (i! ) % 3;
-  console.log("sd", i);
+function Card({ img, title, brief }: CardProps) {
+  // let pos = 0;
+  // pos = (i! ) % 3;
+  // console.log("sd", i);
 
   return (
     <Tilt

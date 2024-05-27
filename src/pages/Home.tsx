@@ -4,17 +4,16 @@ import HeroSection from "../components/home/HeroSection";
 import Services from "../components/home/Services";
 import Testimonials from "../components/home/Testimonials";
 import Navbar from "../components/navbar/Navbar";
-import { SparklesCore } from "../components/ui/Sparkles";
 import { cn } from "../utils/cn";
 
 type Props = {};
 
 export default function Home({}: Props) {
   return (
-    <div className="relative ">
+    <div className="relative  ">
       <Navbar />
 
-      <div className="w-full h-full flex flex-col  relative overflow-x-hidden">
+      <div className="w-full h-full flex flex-col  relative ">
         {/* <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
@@ -29,14 +28,14 @@ export default function Home({}: Props) {
         <div className=" h-full w-full dark:bg-black bg-white  dark:bg-dot-white/[0.3] bg-dot-black/[0.3] relative flex items-center justify-center">
           {/* Radial gradient for the container to give a faded look */}
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-          <div className="gap-12 flex flex-col relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 overflow-auto">
+          <div className="gap-12 flex flex-col relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 ">
             <Services />
             <Testimonials />
 
             <Contact />
+            <FAQS />
           </div>
         </div>
-        <FAQS />
       </div>
     </div>
   );
@@ -70,7 +69,7 @@ export function SecGadientText({ children, className }: any) {
   return (
     <span
       className={cn(
-        `bg-gradient-to-b from-gray-500  to-white   text-transparent bg-clip-text`,
+        `bg-gradient-to-b from-purple-400  to-white   text-transparent bg-clip-text`,
         className
       )}
     >

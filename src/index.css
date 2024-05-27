@@ -28,13 +28,15 @@ body {
     rgba(0, 0, 0, 0) 1px
   ); */
 
-  /* background-color: rgb(0, 0, 0); */
   /* background: linear-gradient(
     130deg,
     var(--geist-background) 30%,
     var(--accents-1) 50%,
     var(--accents-1) 100%
   ); */
+
+  
+  overflow-x:hidden ;
   background:black ;
 }
 img{
@@ -43,7 +45,7 @@ img{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 
 }
 

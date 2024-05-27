@@ -17,7 +17,7 @@ export default function Contact({}: Props) {
         </h1>
         <h6 className="">React out to us</h6>
       </div>
-      <div className="transition-all duration-75 flex gap-4 items-center justify-between flex-col lg:flex-row ">
+      <div className="transition-all duration-75 flex gap-10 sm:gap-4 items-center justify-between flex-col lg:flex-row ">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -200 }}
@@ -32,7 +32,7 @@ export default function Contact({}: Props) {
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 200 }}
-          className="w-[90vw] sm:w-[80%] px-14 "
+          className="w-[90vw] sm:w-[80%] px-2 sm:px-14 "
         >
           <ContactBox />
         </motion.div>
