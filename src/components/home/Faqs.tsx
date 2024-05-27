@@ -33,12 +33,12 @@ export default function FAQS({}: Props) {
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -200 }}
-            className=" max-h-[40rem] sm:max-h-[30rem] overflow-auto overflow-x-hidden px-4 "
+            className=" max-h-[40rem] w-[100%] sm:max-h-[30rem] overflow-auto overflow-x-hidden px-4 "
           >
             <Accordion
               defaultIndex={[0]}
               allowMultiple
-              className="flex flex-col gap-10  "
+              className="flex flex-col gap-10  sm:min-w-[40vw]"
             >
               {accord.map((item: AccordionCardProps, i) => (
                 <AccordianCard {...item} key={i} />
@@ -53,7 +53,7 @@ export default function FAQS({}: Props) {
             <img
               src={faqimg}
               alt=""
-              className="lg:max-w-[40rem] max-w-[300px] sm:max-w-[30rem] "
+              className="lg:max-w-[40vw] max-w-[300px] sm:max-w-[50vw] "
             />
           </motion.div>
         </div>
