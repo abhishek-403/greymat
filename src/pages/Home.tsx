@@ -13,7 +13,7 @@ export default function Home({}: Props) {
     <div className="relative  ">
       <Navbar />
 
-      <div className="w-full h-full flex flex-col  relative ">
+      <div className="w-full h-full flex flex-col  relative sm:px-3 lg:px-24 px-3 ">
         {/* <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"

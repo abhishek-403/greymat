@@ -9,7 +9,7 @@ type Props = {};
 
 export default function Contact({}: Props) {
   return (
-    <div className="text-white px-2 w-[100%] sm:px-36 mb-10 flex  items-center flex-col gap-6">
+    <div className="text-white px-10 w-[100%]  mb-10 flex  items-center flex-col gap-6">
       <div>
         <h1 className="">
           <GradientText>Contact Us</GradientText>

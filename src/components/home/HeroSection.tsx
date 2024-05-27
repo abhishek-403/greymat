@@ -17,7 +17,7 @@ export default function HeroSection({}: Props) {
           // backgroundPosition: "center center ",
         }
       }
-      className="relative  flex justify-between mt-4 sm:mt-0 sm:px-24 px-6  gap-2 text-white z-100 lg:mt-[10px] items-center w-full flex-col-reverse lg:flex-row"
+      className="relative  flex justify-between mt-4 sm:mt-0   gap-2 text-white z-100 lg:mt-[10px] items-center w-full flex-col-reverse lg:flex-row"
     >
       <SparklesCore
         id="tsparticlesfullpage"

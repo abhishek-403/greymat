@@ -16,7 +16,7 @@ type Props = {};
 
 export default function Services({}: Props) {
   return (
-    <div className="text-white px-2 lg:px-20 mb-10 w-full flex  items-center flex-col gap-10">
+    <div className="text-white  mb-10 w-full flex  items-center flex-col gap-10">
       <div className="my-6 ">
         <h1 className="">
           <GradientText>Serives we offer</GradientText>
@@ -63,9 +63,9 @@ function Card({ img, title, brief }: CardProps) {
       //   x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
       //   y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
       // }}
-      className="cursor-pointer  transition-all duration-75 flex flex-col w-[90vw] sm:w-[400px] min-h-[450px] rounded-xl border-2 border-[#343434] p-6 gap-4"
+      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] lg:w-[100%] min-h-[450px] rounded-xl border-2 border-[#343434] p-6 gap-4 "
     >
-      <div className="flex items-center justify-center p-2 object-cover">
+      <div className="flex items-center justify-center p-2 object-cover ">
         <img
           src={img}
           alt=""
