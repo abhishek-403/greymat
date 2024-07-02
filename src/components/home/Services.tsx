@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 import "swiper/css";
 import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
 import contentimg from "../assets/contentmarketing.png";
@@ -16,7 +16,7 @@ type Props = {};
 
 export default function Services({}: Props) {
   return (
-    <div className="text-white px-2 lg:px-20 mb-10 w-full flex  items-center flex-col gap-10">
+    <div className="text-white  mb-10 w-full flex  items-center flex-col gap-10">
       <div className="my-6 ">
         <h1 className="">
           <GradientText>Serives we offer</GradientText>
@@ -37,27 +37,35 @@ export default function Services({}: Props) {
     </div>
   );
 }
-function Card({ img, title, brief, i }: CardProps) {
-  let pos = 0;
-  pos = (i! ) % 3;
-  console.log("sd", i);
+function Card({ img, title, brief }: CardProps) {
+  // let pos = 0;
+  // pos = (i! ) % 3;
+  // console.log("sd", i);
 
   return (
-    <motion.div
+    <Tilt
+      glareBorderRadius="20"
+      glarePosition="all"
+      tiltMaxAngleY={10}
+      tiltMaxAngleX={10}
+      glareMaxOpacity={0.1}
+      glareEnable
+      
       style={{
+
         background: "linear-gradient(180deg, #242424, #121212 65.62%)",
         boxShadow:
           "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
       }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      initial={{
-        opacity: 0,
-        x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
-        y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
-      }}
-      className="transition-all duration-75 flex flex-col w-[90vw] sm:w-[400px] min-h-[450px] border-2 border-[#343434] p-6 gap-4"
+      // whileInView={{ opacity: 1, x: 0, y: 0 }}
+      // initial={{
+      //   opacity: 0,
+      //   x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
+      //   y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
+      // }}
+      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] lg:w-[100%] min-h-[450px] rounded-xl border-2 border-[#343434] p-6 gap-4 "
     >
-      <div className="flex items-center justify-center p-2 object-cover">
+      <div className="flex items-center justify-center p-2 object-cover ">
         <img
           src={img}
           alt=""
@@ -76,7 +84,7 @@ function Card({ img, title, brief, i }: CardProps) {
           {brief}
         </span>
       </div>
-    </motion.div>
+    </Tilt>
   );
 }
 

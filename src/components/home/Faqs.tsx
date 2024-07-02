@@ -7,8 +7,7 @@ import {
   Box,
   ChakraProvider,
 } from "@chakra-ui/react";
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { BottomGlow, GradientText } from "../../pages/Home";
 import faqimg from "../assets/faq.png";
 
@@ -19,16 +18,10 @@ type AccordionCardProps = {
 };
 
 export default function FAQS({}: Props) {
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  if (isInView && !hasAnimated) {
-    setHasAnimated(true);
-  }
+ 
   return (
-    <ChakraWrapper>
-      <div className="flex flex-col px-3 sm:px-20  mb-10 w-full items-center gap-10">
+    <ChakraWrapper className="w-full">
+      <div className="flex flex-col   mb-10 w-full items-center gap-10">
         <div className="w-fit">
           <h1 className="">
             <GradientText>FAQ's</GradientText>
@@ -36,18 +29,20 @@ export default function FAQS({}: Props) {
           </h1>
           <h6 className="">Still having doubts</h6>
         </div>
-        <div className="text-white flex gap-4 sm:gap-0 lg:flex-row  flex-col-reverse   ">
+        <div className="relative w-full text-white  item-center flex gap-10 sm:gap-10 lg:gap-2 lg:flex-row  flex-col-reverse  ">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={hasAnimated ? { opacity: 0, x: -200 } : {}}
-            className=" max-h-[40rem] sm:max-h-[30rem] overflow-auto px-4 "
+            initial={{ opacity: 0, x: -200 }}
+            className=" max-h-[40rem] w-[100%] sm:max-h-[30rem] overflow-auto overflow-x-hidden px-4 "
           >
-            <Accordion defaultIndex={[0]} allowMultiple>
-              <div className="flex flex-col gap-10 min-w-[45vw]">
-                {accord.map((item: AccordionCardProps, i) => (
-                  <AccordianCard {...item} key={i} />
-                ))}
-              </div>
+            <Accordion
+              defaultIndex={[0]}
+              allowMultiple
+              className="flex flex-col gap-10  sm:min-w-[40vw]"
+            >
+              {accord.map((item: AccordionCardProps, i) => (
+                <AccordianCard {...item} key={i} />
+              ))}
             </Accordion>
           </motion.div>
           <motion.div
@@ -58,7 +53,7 @@ export default function FAQS({}: Props) {
             <img
               src={faqimg}
               alt=""
-              className="lg:max-w-[40rem] max-w-[300px] sm:max-w-[35rem] "
+              className="lg:max-w-[40vw] max-w-[300px] sm:max-w-[50vw] "
             />
           </motion.div>
         </div>
@@ -73,7 +68,7 @@ function ChakraWrapper({ children }: any) {
 }
 function AccordianCard({ title, content }: AccordionCardProps) {
   return (
-    <AccordionItem>
+    <AccordionItem >
       <h2 className="text-xl font-poppins font-bold ">
         <AccordionButton>
           <Box as="span" flex="1" textAlign="left">

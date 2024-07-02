@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import React from "react";
-import TextTransition, { presets } from "react-text-transition";
-import {
-  BottomGlow,
-  GradientText,
-  TerGradientText
-} from "../../pages/Home";
-import bg from "../assets/bg2.png";
+import ReactTextTransition, { presets } from "react-text-transition";
+import { BottomGlow, GradientText, TerGradientText } from "../../pages/Home";
 import PrimaryButton from "../ui/Buttons/Buttons";
+import { SparklesCore } from "../ui/Sparkles";
+import bg from '../assets/bg2.png'
 type Props = {};
 
 export default function HeroSection({}: Props) {
@@ -20,12 +17,20 @@ export default function HeroSection({}: Props) {
           // backgroundPosition: "center center ",
         }
       }
-      className="relative  flex justify-between mt-4 sm:mt-0 sm:px-24 px-8 gap-2 text-white z-100 lg:mt-[50px] items-center w-full flex-col-reverse lg:flex-row"
+      className="relative  flex justify-between mt-4 sm:mt-0   gap-2 text-white z-100 lg:mt-[10px] items-center w-full flex-col-reverse lg:flex-row"
     >
-      <div className="font-catamaran flex flex-col gap-4 lg:gap-8 sm:w-[800px]  text-left">
-        <div className="font-bold text-2xl sm:text-3xl  lg:text-5xl flex gap-3 lg:mt-20 mt-10 transition-all duration-75 ">
-          <span className="">Unlock Your Brand's </span>
-          <TextComponent />
+      <SparklesCore
+        id="tsparticlesfullpage"
+        background="transparent"
+        minSize={0.6}
+        maxSize={1.4}
+        particleDensity={20}
+        className="w-full h-full absolute z-[-1]"
+        particleColor="#FFFFFF"
+      />
+      <div className="px-3 sm:px-0 font-catamaran flex flex-col gap-8 lg:gap-8 sm:w-[700px]  text-left">
+        <div className="  font-bold text-3xl text-center sm:text-left sm:text-3xl lg:text-[2.5rem]  gap-3 lg:mt-20 mt-2 sm:mt-10 transition-all duration-75 ">
+          Unlock Your Brand's <TextComponent /> Here
         </div>
         <div>
           <p className="font-poppins text-base lg:text-lg w-[90%]">
@@ -33,7 +38,7 @@ export default function HeroSection({}: Props) {
             awareness, reach your target audience & grow your business online.
           </p>
         </div>
-        <div className="ml-4">
+        <div className="ml-2 sm:ml-4">
           <ul className="flex flex-col gap-3 font-cataram font-semibold">
             <li className="flex gap-2 items-center  ">
               <span className="text-blue-400 font-extrabold ">
@@ -80,7 +85,7 @@ export default function HeroSection({}: Props) {
   );
 }
 
-const TEXTS = ["Potential", "Connect", "Engage", "Excel"];
+const TEXTS = ["Potenial", "Power", "Magic", "Connect"];
 
 const TextComponent = () => {
   const [index, setIndex] = React.useState(0);
@@ -91,9 +96,12 @@ const TextComponent = () => {
   }, []);
 
   return (
-    <TextTransition springConfig={presets.wobbly} className="">
+      
+    <ReactTextTransition springConfig={presets.gentle}
+            style={{ margin: "0 4px" }}
+            inline>
       <GradientText>{TEXTS[index % TEXTS.length]}</GradientText>
-    </TextTransition>
+    </ReactTextTransition>
   );
 };
 

@@ -9,7 +9,7 @@ type Props = {};
 
 export default function Contact({}: Props) {
   return (
-    <div className="text-white px-2 sm:px-20 mb-10 w-full flex  items-center flex-col gap-6">
+    <div className="text-white px-10 w-[100%]  mb-10 flex  items-center flex-col gap-6">
       <div>
         <h1 className="">
           <GradientText>Contact Us</GradientText>
@@ -17,18 +17,22 @@ export default function Contact({}: Props) {
         </h1>
         <h6 className="">React out to us</h6>
       </div>
-      <div className="transition-all duration-75 flex gap-12 items-center justify-between flex-col lg:flex-row ">
+      <div className="transition-all duration-75 flex gap-10 sm:gap-4 items-center justify-between flex-col lg:flex-row ">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -200 }}
           className=""
         >
-          <img src={contactimg} alt="" className="object-fill w-[300px] sm:w-[35vw] " />
+          <img
+            src={contactimg}
+            alt=""
+            className="object-fill w-[85vw] sm:w-[50vw] "
+          />
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 200 }}
-          className="w-[340px] sm:w-[100%]"
+          className="w-[90vw] sm:w-[80%] px-2 sm:px-14 "
         >
           <ContactBox />
         </motion.div>
@@ -43,7 +47,7 @@ export function ContactBox() {
     console.log("Form submitted");
   };
   return (
-    <div className="py-2 w-[100%]  mx-auto rounded-none md:rounded-2xl px-4 md:px-8 shadow-input bg-white dark:bg-black">
+    <div className="py-2 w-[100%] border border-[#343434]  mx-auto rounded-none md:rounded-2xl px-4 md:px-8 shadow-input bg-white dark:bg-black">
       <form className="my-8 flex flex-col gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col  md:flex-row space-y-10 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
