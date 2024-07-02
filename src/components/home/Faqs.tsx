@@ -5,9 +5,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  ChakraProvider,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { BottomGlow, GradientText } from "../../pages/Home";
 import faqimg from "../assets/faq.png";
 
@@ -52,11 +50,6 @@ export default function FAQS({}: Props) {
       </div>
     </div>
   );
-}
-
-function ChakraWrapper({ children }: any) {
-  // @ts-ignore
-  return <ChakraProvider theme="dark">{children}</ChakraProvider>;
 }
 function AccordianCard({ title, content }: AccordionCardProps) {
   return (

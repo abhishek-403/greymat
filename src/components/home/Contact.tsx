@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { BottomGlow, GradientText } from "../../pages/Home";
 import { cn } from "../../utils/cn";
