@@ -1,18 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home"; 
-import AOS from 'aos'
-import "aos/dist/aos.css";
-import "animate.css/animate.compat.css";
+import Home from "./pages/Home";
 import { useEffect } from "react";
+import AOS from "aos";
 
 function App() {
-     useEffect(() => {
-       AOS.init({
-         duration: 1200,
-         once: true,
-       });
-     }, []);
- 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      delay:100,
+    });
+  }, []);
+
   return (
     <>
       <Routes>

@@ -10,8 +10,8 @@ type Props = {};
 
 export default function Home({}: Props) {
   return (
-    <div className="relative  ">
-      <Navbar />
+    <div className="relative sm:px-10 ">
+        <Navbar />
 
       <div className="w-full h-full flex flex-col  relative sm:px-3 lg:px-24 px-3 ">
         {/* <SparklesCore

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { BottomGlow, GradientText, TerGradientText } from "../../pages/Home";
@@ -17,7 +16,7 @@ export default function HeroSection({}: Props) {
           // backgroundPosition: "center center ",
         }
       }
-      className="relative  flex justify-between mt-4 sm:mt-0   gap-2 text-white z-100 lg:mt-[10px] items-center w-full flex-col-reverse lg:flex-row"
+      className="relative  flex justify-between mt-4 sm:mt-0   gap-2 text-white z-100 lg:mt-[4px] items-center w-full flex-col-reverse lg:flex-row"
     >
       <SparklesCore
         id="tsparticlesfullpage"
@@ -28,7 +27,10 @@ export default function HeroSection({}: Props) {
         className="w-full h-full absolute z-[-1]"
         particleColor="#FFFFFF"
       />
-      <div className="px-3 sm:px-0 font-catamaran flex flex-col gap-8 lg:gap-8 sm:w-[700px]  text-left">
+      <div
+        data-aos="fade-right"
+         className="px-3 sm:px-0 font-catamaran flex flex-col gap-8 lg:gap-8 sm:w-[700px]  text-left"
+      >
         <div className="  font-bold text-3xl text-center sm:text-left sm:text-3xl lg:text-[2.5rem]  gap-3 lg:mt-20 mt-2 sm:mt-10 transition-all duration-75 ">
           Unlock Your Brand's <TextComponent /> Here
         </div>
@@ -74,13 +76,12 @@ export default function HeroSection({}: Props) {
           <PrimaryButton title="Get started" />
         </div>
       </div>
-      <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: 200 }}
-        className="w-[300px] sm:w-[400px] lg:w-[530px]  "
+      <div
+        // data-aos="fade-left"
+        className="w-[300px] mt-4 sm:w-[400px] lg:w-[500px]  "
       >
         <img src={bg} alt="bg" className="object-cover   " />
-      </motion.div>
+      </div>
     </div>
   );
 }

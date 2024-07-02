@@ -1,11 +1,14 @@
 import Tilt from "react-parallax-tilt";
 import "swiper/css";
 import { BottomGlow, GradientText, SecGadientText } from "../../pages/Home";
-import contentimg from "../assets/contentmarketing.png";
-import influimg from "../assets/influencerimg.png";
-import seoimg from "../assets/seoimg2.png";
-import socialimg from "../assets/socialimg.png";
 import webimg from "../assets/webimg.png";
+import webappimg from "../assets/webappimg.png";
+import growbuisnessimg from "../assets/growbuisness.png";
+import ecommerceimg from "../assets/ecommerceimg.png";
+import enterpriseimg from "../assets/enterpriseimg.png";
+import startupimg from "../assets/stratupimg.png";
+import PrimaryButton from "../ui/Buttons/Buttons";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 type CardProps = {
   img: string;
   title: string;
@@ -24,11 +27,11 @@ export default function Services({}: Props) {
           <h6>How diverse we are</h6>
         </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-10 items-center justify-center mx-auto w-full   ">
+      <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  gap-10 items-center justify-center mx-auto w-full   ">
         {services.map((ser, i) => {
           let prop = { ...ser, i };
           return (
-            <div className="mx-auto" key={i}>
+            <div data-aos="fade-up" className="mx-auto" key={i}>
               <Card {...prop} />
             </div>
           );
@@ -38,10 +41,6 @@ export default function Services({}: Props) {
   );
 }
 function Card({ img, title, brief }: CardProps) {
-  // let pos = 0;
-  // pos = (i! ) % 3;
-  // console.log("sd", i);
-
   return (
     <Tilt
       glareBorderRadius="20"
@@ -50,39 +49,32 @@ function Card({ img, title, brief }: CardProps) {
       tiltMaxAngleX={10}
       glareMaxOpacity={0.1}
       glareEnable
-      
       style={{
-
         background: "linear-gradient(180deg, #242424, #121212 65.62%)",
         boxShadow:
           "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
       }}
-      // whileInView={{ opacity: 1, x: 0, y: 0 }}
-      // initial={{
-      //   opacity: 0,
-      //   x: pos == 0 ? -100 : pos == 1 ? 0 : 100,
-      //   y: pos == 0 ? 0 : pos == 1 ? 100 : 0,
-      // }}
       className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] lg:w-[100%] min-h-[450px] rounded-xl border-2 border-[#343434] p-6 gap-4 "
     >
       <div className="flex items-center justify-center p-2 object-cover ">
         <img
           src={img}
           alt=""
-          className="bg-transparent "
+          className="bg-transparent dropshadow"
           style={{
             objectFit: "contain",
-            height: 180,
+            height: 220,
           }}
         />
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <SecGadientText className="font-cataram text-center text-[24px] sm:text-3xl font-extrabold capitalize ">
+      <div className="flex flex-col items-center justify-center gap-2">
+        <SecGadientText className="font-cataram text-center text-[24px] sm:text-2xl font-extrabold capitalize ">
           {title}
         </SecGadientText>
-        <span className="text-[var(--accents-5)] font-poppins p-2 text-sm">
+        <span className="text-neutral-20 font-poppins p-2 text-sm text-center ">
           {brief}
         </span>
+        <PrimaryButton title={"Get Started"} icon={<ArrowForwardIcon />} />
       </div>
     </Tilt>
   );
@@ -90,40 +82,40 @@ function Card({ img, title, brief }: CardProps) {
 
 const services: CardProps[] = [
   {
-    img: seoimg,
-    title: "SEO",
+    img: startupimg,
+    title: "Web for startup",
     brief:
-      "SEO involves strategies to improve a website's visibility in search results pages to attract more traffic. It includes optimizing website content, meta tags, etc. to rank higher for search queries.",
+      "Kick start your new venture with a stunning website and a great online presence with the best web development company in Vizag. We develop top-notch websites for startups at affordable prices and offer complete support.",
   },
   {
-    img: socialimg,
-    title: "Social Media Marketing",
+    img: growbuisnessimg,
+    title: "Web for growing business",
     brief:
-      "Leveraging social platforms to engage audiences, build brand awareness, and drive traffic and sales through strategic content creation, community management, and targeted advertising.",
+      "Growing businesses need a strong online presence to establish their brand value. With professional websites developed by our developers, businesses can offer their customers a complete view of their offerings and an amazing user experience.",
   },
   {
-    img: contentimg,
-    title: "Content Marketing",
+    img: enterpriseimg,
+    title: "Web For Enterprise",
     brief:
-      "Strategically creating and distributing valuable, relevant content to attract and retain a specific audience, fostering brand loyalty, and driving profitable customer action through various channels and formats.",
+      "We can help enterprises build a strong brand identity for their business with a stunning website that offers their users a great user experience. Our attractive and robust websites are custom designed for our clients at the best prices.",
   },
   {
-    img: webimg,
-    title: "Website Design",
+    img: ecommerceimg,
+    title: "E-commerce development",
     brief:
-      "Creating visually appealing, user-friendly websites to enhance brand presence and user experience, optimizing for various devices and browsers to ensure seamless accessibility and engagement.",
+      "Success in e-commerce business demands a great user experience. The websites we develop for e-commerce businesses give not only a great look but also offer detailed categorization of products and/or services.",
   },
 
   {
-    img: influimg,
-    title: "Influencer Marketing",
+    img: webappimg,
+    title: "Web App development",
     brief:
-      "Partnering with influential individuals to promote products or services, leveraging their credibility and reach to connect with target audiences authentically and drive conversions.",
+      "Boost your business success with web applications that help establish your brand image. The web apps developed by our developers will meet all your requirements and help achieve your business goals.",
   },
   {
-    img: seoimg,
-    title: "SEO",
+    img: webimg,
+    title: "Website Rampage",
     brief:
-      "SEO involves strategies to improve a website's visibility in search results pages to attract more traffic. It includes optimizing website content, meta tags, etc. to rank higher for search queries.",
+      "Give your website a fresh new look that attracts more customers. We can help your website get a complete redo with a whole new set of features and colours. ",
   },
 ];

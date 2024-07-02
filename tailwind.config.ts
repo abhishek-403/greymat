@@ -11,13 +11,53 @@ const {
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    
     fontFamily: {
       roboto: ["Roboto Slab", "serif"],
       poppins: ["Poppins", "sans-serif"],
       cataram: ["Catamaran", "sans-serif"],
     },
     extend: {
+      colors: {
+        neutral: {
+          100: "#000000",
+          90: "#1A1A1A",
+          80: "#333333",
+          70: "#4D4D4D",
+          60: "#666666",
+          50: "#808080`",
+          40: "#999999",
+          30: "#B3B3B3",
+          20: "#CCCCCC",
+          10: "#E6E6E6",
+          0: "#FFFFFF",
+        },
+        primary: {
+          DEFAULT: "#FFD700",
+          dark: "#CCAC00",
+          light: "#FFDF33",
+
+          0: "#FFFFFF",
+          20: "#FFF7CC",
+          40: "#FFEF99",
+          60: "#FFE766",
+          80: "#FFDF33",
+          100: "#FFD700",
+          120: "#CCAC00",
+          140: "#998100",
+          160: "#665600",
+          180: "#332B00",
+          200: "#000000",
+        },
+        secondary: {
+          DEFAULT: "#00FFD7",
+        },
+        tertiary: {
+          DEFAULT: "#D700FF",
+        },
+        link: {
+          DEFAULT: "#00FFD7",
+        },
+      },
       dropShadow: {
         sm: "0 1px 1px rgba(255,255,255,0.8)",
         "4xl": [
@@ -26,10 +66,19 @@ export default {
         ],
       },
       animation: {
+        movedown: "movedown 3s linear",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
+        movedown: {
+          from: {
+            top: "10",
+          },
+          to: {
+            top: "0",
+          },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",

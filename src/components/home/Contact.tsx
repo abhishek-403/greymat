@@ -18,24 +18,19 @@ export default function Contact({}: Props) {
         <h6 className="">React out to us</h6>
       </div>
       <div className="transition-all duration-75 flex gap-10 sm:gap-4 items-center justify-between flex-col lg:flex-row ">
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -200 }}
-          className=""
-        >
+        <div data-aos="fade-right" className="">
           <img
             src={contactimg}
             alt=""
             className="object-fill w-[85vw] sm:w-[50vw] "
           />
-        </motion.div>
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 200 }}
+        </div>
+        <div
+          data-aos="fade-left"
           className="w-[90vw] sm:w-[80%] px-2 sm:px-14 "
         >
           <ContactBox />
-        </motion.div>
+        </div>
       </div>
     </div>
   );
