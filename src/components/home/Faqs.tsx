@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { BottomGlow, GradientText } from "../../pages/Home";
 import faqimg from "../assets/faq.png";
+import { Element } from "react-scroll";
 
 type Props = {};
 type AccordionCardProps = {
@@ -17,7 +18,7 @@ type AccordionCardProps = {
 
 export default function FAQS({}: Props) {
   return (
-    <div className="flex flex-col   mb-10 w-full items-center gap-10">
+    <Element className="flex flex-col mb-10 w-full items-center gap-10 py-6" name="faq">
       <div className="w-fit">
         <h1 className="">
           <GradientText>FAQ's</GradientText>
@@ -48,7 +49,7 @@ export default function FAQS({}: Props) {
           />
         </div>
       </div>
-    </div>
+    </Element>
   );
 }
 function AccordianCard({ title, content }: AccordionCardProps) {

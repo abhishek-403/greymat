@@ -4,11 +4,15 @@ import { cn } from "../../utils/cn";
 import contactimg from "../assets/contactimg.png";
 import { Input, TextArea } from "../ui/input";
 import { Label } from "../ui/label";
+import { Element } from "react-scroll";
 type Props = {};
 
 export default function Contact({}: Props) {
   return (
-    <div className="text-white px-10 w-[100%]  mb-10 flex  items-center flex-col gap-6">
+    <Element
+      name="contact"
+      className=" w-full  flex-col gap-10 text-white px-10 mb-10 flex  items-center py-6"
+    >
       <div>
         <h1 className="">
           <GradientText>Contact Us</GradientText>
@@ -31,7 +35,7 @@ export default function Contact({}: Props) {
           <ContactBox />
         </div>
       </div>
-    </div>
+    </Element>
   );
 }
 

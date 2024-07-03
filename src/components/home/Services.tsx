@@ -9,6 +9,7 @@ import enterpriseimg from "../assets/enterpriseimg.png";
 import startupimg from "../assets/stratupimg.png";
 import PrimaryButton from "../ui/Buttons/Buttons";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Element } from "react-scroll";
 type CardProps = {
   img: string;
   title: string;
@@ -19,7 +20,10 @@ type Props = {};
 
 export default function Services({}: Props) {
   return (
-    <div className="text-white  mb-10 w-full flex  items-center flex-col gap-10">
+    <Element
+      className="text-white  mb-10 w-full flex  items-center flex-col gap-10"
+      name="services"
+    >
       <div className="my-6 ">
         <h1 className="">
           <GradientText>Serives we offer</GradientText>
@@ -37,7 +41,7 @@ export default function Services({}: Props) {
           );
         })}
       </div>
-    </div>
+    </Element>
   );
 }
 function Card({ img, title, brief }: CardProps) {

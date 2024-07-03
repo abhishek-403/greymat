@@ -3,38 +3,27 @@ import FAQS from "../components/home/Faqs";
 import HeroSection from "../components/home/HeroSection";
 import Services from "../components/home/Services";
 import Testimonials from "../components/home/Testimonials";
-import Navbar from "../components/navbar/Navbar";
 import { cn } from "../utils/cn";
+import About from "../components/home/About";
 
 type Props = {};
 
 export default function Home({}: Props) {
+  
   return (
-    <div className="relative sm:px-10 ">
-        <Navbar />
-
-      <div className="w-full h-full flex flex-col  relative sm:px-3 lg:px-24 px-3 ">
-        {/* <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={20}
-          className="w-full h-full absolute z-[-1]"
-          particleColor="#FFFFFF"
-        /> */}
-
-        <HeroSection />
-        <div className=" h-full w-full dark:bg-black bg-white  dark:bg-dot-white/[0.3] bg-dot-black/[0.3] relative flex items-center justify-center">
-          {/* Radial gradient for the container to give a faded look */}
-          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-          <div className="gap-12 flex flex-col relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 overflow-hidden ">
-            <Services />
-            <Testimonials />
-
-            <Contact />
-            <FAQS />
-          </div>
+    <div
+      className="w-full h-full flex flex-col  relative sm:px-3 lg:px-24 px-3 "
+    >
+      <HeroSection />
+      <div className=" h-full w-full dark:bg-black bg-white  dark:bg-dot-white/[0.3] bg-dot-black/[0.3] relative flex items-center justify-center">
+        {/* Radial gradient for the container to give a faded look */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className="gap-6 flex flex-col relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 overflow-hidden ">
+          <Services />
+          <About/>
+          <Contact />
+          <FAQS />
+          <Testimonials />
         </div>
       </div>
     </div>

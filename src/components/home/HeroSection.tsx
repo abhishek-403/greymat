@@ -4,18 +4,12 @@ import { BottomGlow, GradientText, TerGradientText } from "../../pages/Home";
 import PrimaryButton from "../ui/Buttons/Buttons";
 import { SparklesCore } from "../ui/Sparkles";
 import bg from '../assets/bg2.png'
+import { Element } from "react-scroll";
 type Props = {};
 
 export default function HeroSection({}: Props) {
   return (
-    <div
-      style={
-        {
-          // backgroundImage: `url(${bgnet})`,
-          // backgroundSize: "cover",
-          // backgroundPosition: "center center ",
-        }
-      }
+    <Element name="home"
       className="relative  flex justify-between mt-4 sm:mt-0   gap-2 text-white z-100 lg:mt-[4px] items-center w-full flex-col-reverse lg:flex-row"
     >
       <SparklesCore
@@ -77,12 +71,12 @@ export default function HeroSection({}: Props) {
         </div>
       </div>
       <div
-        // data-aos="fade-left"
+        data-aos="fade-left"
         className="w-[300px] mt-4 sm:w-[400px] lg:w-[500px]  "
       >
         <img src={bg} alt="bg" className="object-cover   " />
       </div>
-    </div>
+    </Element>
   );
 }
 
