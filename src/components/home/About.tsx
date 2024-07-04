@@ -1,25 +1,26 @@
-import { Element } from "react-scroll";
 import { BottomGlow, GradientText } from "../../pages/Home";
 import aboutImg1 from "../assets/how-we-work.webp";
 import aboutImg2 from "../assets/team.webp";
-type Props = {};
+type Props = { hideHeading?: boolean };
 
-function About({}: Props) {
+function About({ hideHeading }: Props) {
   return (
-    <Element
-      className="text-white mb-10 w-full flex  items-center flex-col md:gap-8"
-      name="about"
-    >
-      <div className="my-6 ">
-        <h1 className="">
-          <GradientText>About Us</GradientText>
-          <BottomGlow />
-          <h6>Meet our team</h6>
-        </h1>
-      </div>
+    <div className="text-white mb-10 w-full flex  items-center flex-col md:gap-8">
+      {!hideHeading && (
+        <div className="my-6 ">
+          <h1 className="">
+            <GradientText>About Us</GradientText>
+            <BottomGlow />
+            <h6>Meet our team</h6>
+          </h1>
+        </div>
+      )}
       <div className="flex gap-10 flex-col items-center justify-center mx-auto w-full   ">
         <div className="flex sm:flex-row flex-col  gap-6 md:gap-2 ">
-          <div className="flex-1 text-center flex flex-col md:gap-10 gap-4 md:p-10 py-0 px-6">
+          <div
+            data-aos="fade-right"
+            className="flex-1 text-center flex flex-col md:gap-10 gap-4 md:p-10 py-0 px-6"
+          >
             <div className="pt-2 md:pt-10 flex flex-col gap-4">
               <p className="md:text-2xl text-lg font-semibold ">
                 Efficiency & Effectiveness in every step of Web Design and App
@@ -37,16 +38,33 @@ function About({}: Props) {
               rule the market within no time.
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center px-2">
-            <img src={aboutImg1} alt="aboutimg" className="rounded-[30px] sm:p-4" />
+          <div
+            data-aos="fade-left"
+            className="flex-1 flex items-center justify-center px-2"
+          >
+            <img
+              src={aboutImg1}
+              alt="aboutimg"
+              className="rounded-[30px] sm:p-4"
+            />
           </div>
         </div>
         <div className="flex sm:flex-row flex-col-reverse gap-6 md:gap-2">
-          <div className="flex-1 flex items-center justify-center px-2">
-            <img src={aboutImg2} alt="aboutim2"  className="rounded-[30px] sm:p-4"/>
+          <div
+            data-aos="fade-right"
+            className="flex-1 flex items-center justify-center px-2"
+          >
+            <img
+              src={aboutImg2}
+              alt="aboutim2"
+              className="rounded-[30px] sm:p-4"
+            />
           </div>
 
-          <div className="flex-1 text-center flex flex-col md:gap-10 gap-4 md:p-10 py-0 px-6">
+          <div
+            data-aos="fade-left"
+            className="flex-1 text-center flex flex-col md:gap-10 gap-4 md:p-10 py-0 px-6"
+          >
             <div className="pt-2 md:pt-10 flex flex-col gap-4">
               <p className="md:text-2xl text-lg font-semibold ">
                 Enthusiasm & Energy in every form of work
@@ -68,7 +86,7 @@ function About({}: Props) {
           </div>
         </div>
       </div>
-    </Element>
+    </div>
   );
 }
 

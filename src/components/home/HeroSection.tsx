@@ -1,15 +1,14 @@
 import React from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { BottomGlow, GradientText, TerGradientText } from "../../pages/Home";
-import PrimaryButton from "../ui/Buttons/Buttons";
+import PrimaryButton, { PrimaryButtonLight } from "../ui/Buttons/Buttons";
 import { SparklesCore } from "../ui/Sparkles";
 import bg from '../assets/bg2.png'
-import { Element } from "react-scroll";
 type Props = {};
 
 export default function HeroSection({}: Props) {
   return (
-    <Element name="home"
+    <div 
       className="relative  flex justify-between mt-4 sm:mt-0   gap-2 text-white z-100 lg:mt-[4px] items-center w-full flex-col-reverse lg:flex-row"
     >
       <SparklesCore
@@ -66,8 +65,9 @@ export default function HeroSection({}: Props) {
           </ul>
         </div>
 
-        <div className="ml-4 mt-6">
-          <PrimaryButton title="Get started" />
+        <div className="ml-4 mt-6 flex gap-4 flex-wrap">
+          <PrimaryButton link="/contact" title="Get started" />
+          <PrimaryButtonLight link="/services" title="Our services" />
         </div>
       </div>
       <div
@@ -76,7 +76,7 @@ export default function HeroSection({}: Props) {
       >
         <img src={bg} alt="bg" className="object-cover   " />
       </div>
-    </Element>
+    </div>
   );
 }
 
@@ -118,33 +118,3 @@ function Arrow() {
     </svg>
   );
 }
-
-// <div
-//   style={{
-//     backgroundImage: `url(${bgnet})`,
-//     backgroundSize: "cover",
-//     backgroundPosition: "center center ",
-//   }}
-//   className="relative flex justify-between px-16 gap-2 text-white  "
-// >
-//   <div className="font-catamaran flex flex-col gap-6 w-[800px]">
-//     <div className="font-semibold text-5xl flex gap-3 mt-20 ">
-//       <span>Unlock Your Brand's </span>
-//     </div>
-//     <div className="font-semibold text-xl ">
-//       <span>
-//         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt error
-//         ullam laboriosam magni voluptate voluptatum repellendus suscipit
-//         nihil recusandae, eius minus, nesciunt omnis et rem iste ea
-//         accusantium ut quis!{" "}
-//       </span>
-//     </div>
-
-//     <div>
-//       <PrimaryButton title="Get started" />
-//     </div>
-//   </div>
-//   <div className="w-[500px]  ">
-//     <img src={bg} alt="bg" />
-//   </div>
-// </div>

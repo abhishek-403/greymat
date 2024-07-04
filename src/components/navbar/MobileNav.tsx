@@ -1,5 +1,7 @@
 import { cn } from "../../utils/cn";
-import { TABS, TextBox } from "./Navbar";
+import { TABS } from "../constants";
+import { TabType } from "../constants/types";
+import { TextBox } from "./Navbar";
 
 export default function MobileNav({
   isOpen,
@@ -16,9 +18,13 @@ export default function MobileNav({
           isOpen && `opacity-100 mobileNavVisible`
         )}
       >
-        {TABS.map((tab,i) => (
-          <div key={i} className="border-b border-neutral-80 " onClick={()=>setIsOpen(false)}>
-            <TextBox  link={tab.link}>{tab.name}</TextBox>
+        {TABS.map((tab: TabType, i:number) => (
+          <div
+            key={i}
+            className="border-b border-neutral-80 "
+            onClick={() => setIsOpen(false)}
+          >
+            <TextBox link={tab.link}>{tab.name}</TextBox>
           </div>
         ))}
       </ul>

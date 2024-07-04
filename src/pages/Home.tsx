@@ -12,7 +12,7 @@ export default function Home({}: Props) {
   
   return (
     <div
-      className="w-full h-full flex flex-col  relative sm:px-3 lg:px-24 px-3 "
+      className="w-full h-full flex flex-col  relative "
     >
       <HeroSection />
       <div className=" h-full w-full dark:bg-black bg-white  dark:bg-dot-white/[0.3] bg-dot-black/[0.3] relative flex items-center justify-center">
