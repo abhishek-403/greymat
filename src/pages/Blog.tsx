@@ -1,7 +1,6 @@
-import Careers from "../components/home/Careers";
-import { BottomGlow, GradientText, SecGadientText } from "./Home";
 import blogImg1 from "../components/assets/blogimg1.png";
 import { TerButton } from "../components/ui/Buttons/Buttons";
+import { BottomGlow, GradientText, SecGadientText } from "./Home";
 type Props = {};
 
 export default function BlogPage({}: Props) {
