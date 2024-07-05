@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import "./Button.css";
+import { cn } from "../../../utils/cn";
 type Props = {
   title?: string;
   icon?: React.ReactNode;
   link?: string;
+  className?: string;
 };
 
 export default function PrimaryButton({ title, icon, link }: Props) {
@@ -20,7 +22,7 @@ export default function PrimaryButton({ title, icon, link }: Props) {
     </Link>
   );
 }
-export function PrimaryButtonLight({ title, icon ,link}: Props) {
+export function PrimaryButtonLight({ title, icon, link }: Props) {
   return (
     <Link
       to={link ?? "/"}
@@ -35,13 +37,13 @@ export function PrimaryButtonLight({ title, icon ,link}: Props) {
   );
 }
 
-export function TerButton({}: Props) {
+export function TerButton({ title, link, className }: Props) {
   return (
-    <section className="buttons">
-      <div className="container">
-        <a href="https://twitter.com/Dave_Conner" className="btn btn-5">
-          Hover
-        </a>
+    <section className={"buttons"}>
+      <div className={cn("container", className)}>
+        <Link to={link ?? "/"} className="btn btn-5">
+          {title}
+        </Link>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import { BottomGlow, GradientText } from "../../pages/Home";
-import aboutImg1 from "../assets/how-we-work.webp";
-import aboutImg2 from "../assets/team.webp";
+import aboutImg1 from "../assets/aboutimg3.jpg";
+import aboutImg2 from "../assets/aboutimg2-removebg.png";
 type Props = { hideHeading?: boolean };
 
 function About({ hideHeading }: Props) {

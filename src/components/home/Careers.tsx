@@ -10,7 +10,7 @@ interface Props {
 
 export default function Careers({ hideHeading }: Props) {
   return (
-    <div className=" w-full  flex-col gap-10 text-white px-10 mb-10 flex  items-center py-6">
+    <div className=" w-full  flex-col gap-10 text-white  mb-10 flex  items-center py-6">
       {!hideHeading && (
         <div>
           <h1 className="">

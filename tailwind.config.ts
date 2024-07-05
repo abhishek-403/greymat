@@ -7,7 +7,6 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
-
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -32,31 +31,23 @@ export default {
           0: "#FFFFFF",
         },
         primary: {
-          DEFAULT: "#FFD700",
-          dark: "#CCAC00",
-          light: "#FFDF33",
+          DEFAULT: "#393BB2",
+          dark: "#2325AB",
+          light: "#8C8DDC",
 
           0: "#FFFFFF",
-          20: "#FFF7CC",
-          40: "#FFEF99",
-          60: "#FFE766",
-          80: "#FFDF33",
-          100: "#FFD700",
-          120: "#CCAC00",
-          140: "#998100",
-          160: "#665600",
-          180: "#332B00",
+          40: "#8C8DDC",
+          60: "#6364C6",
+          80: "#484AB7",
+          100: "#393BB2",
+          120: "#2C2FB1",
+          140: "#2325AB",
           200: "#000000",
         },
         secondary: {
-          DEFAULT: "#00FFD7",
+          DEFAULT: "#E2CBFF",
         },
-        tertiary: {
-          DEFAULT: "#D700FF",
-        },
-        link: {
-          DEFAULT: "#00FFD7",
-        },
+       
       },
       dropShadow: {
         sm: "0 1px 1px rgba(255,255,255,0.8)",
@@ -124,7 +115,6 @@ export default {
     },
   ],
 };
-
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));

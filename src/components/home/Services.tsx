@@ -65,7 +65,7 @@ function Card({ img, title, brief }: CardProps) {
         <span className="text-neutral-20 font-poppins p-2 text-sm text-center ">
           {brief}
         </span>
-        <PrimaryButton title={"Get Started"} icon={<ArrowForwardIcon />} />
+        <PrimaryButton title={"Get Started"} link="/contact" icon={<ArrowForwardIcon />} />
       </div>
     </Tilt>
   );

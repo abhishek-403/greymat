@@ -81,6 +81,13 @@ h1 {
   text-align: center;
   color: white;
 }
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Poppins";
+  text-align: center;
+  color: white;
+}
 h6 {
   font-family: "Catamaran";
   font-weight: 600;

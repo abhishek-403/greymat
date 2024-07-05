@@ -7,6 +7,8 @@ import ServicesPage from "./pages/Services";
 import ContactPage from "./pages/Contact";
 import AboutPage from "./pages/About";
 import CareersPage from "./pages/Careers";
+import BlogPage from "./pages/Blog";
+import Footer from "./components/home/Footer";
 
 function App() {
   useEffect(() => {
@@ -16,16 +18,24 @@ function App() {
       delay: 200,
     });
   }, []);
-    return (
-    <div className="relative sm:px-3 lg:px-24 px-3 ">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<ServicesPage/>} />
-        <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/about" element={<AboutPage/>} />
-        <Route path="/careers" element={<CareersPage/>} />
-      </Routes>
+  return (
+    <div className="">
+      <div className="sticky top-0  w-full z-[100] sm:px-3 lg:px-12 px-3">
+        <Navbar />
+      </div>
+      <div className="relative sm:px-3 lg:px-24 px-3">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+        </Routes>
+      </div>
+      <div>
+        <Footer/>
+      </div>
     </div>
   );
 }
