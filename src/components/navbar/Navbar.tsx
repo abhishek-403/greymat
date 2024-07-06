@@ -38,7 +38,7 @@ export default function Navbar({}: Props) {
           <img
             src={logo}
             alt="logo"
-            className="md:w-[70px] w-[60px] drop-shadow "
+            className="md:h-[70px] h-[60px] drop-shadow "
           />
         </Link>
         <div className="text-white hidden md:flex ">

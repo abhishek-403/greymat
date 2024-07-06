@@ -33,7 +33,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
         </Routes>
       </div>
-      <div>
+      <div className="mt-16">
         <Footer/>
       </div>
     </div>
