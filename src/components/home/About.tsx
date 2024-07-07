@@ -1,19 +1,14 @@
-import { BottomGlow, GradientText } from "../../pages/Home";
-import aboutImg1 from "../assets/aboutimg3.jpg";
+import { BottomGlow, PrimaryHeading } from "../../utils/utils";
 import aboutImg2 from "../assets/aboutimg2-removebg.png";
+import aboutImg1 from "../assets/aboutimg3.jpg";
 type Props = { hideHeading?: boolean };
 
 function About({ hideHeading }: Props) {
   return (
     <div className="text-white mb-10 w-full flex  items-center flex-col md:gap-8">
       {!hideHeading && (
-        <div className="my-6 ">
-          <h1 className="">
-            <GradientText>About Us</GradientText>
-            <BottomGlow />
-            <h6>Meet our team</h6>
-          </h1>
-        </div>
+        <PrimaryHeading head={"About Us"} subhead={"Meet our team"}/>
+       
       )}
       <div className="flex gap-10 flex-col items-center justify-center mx-auto w-full   ">
         <div className="flex sm:flex-row flex-col  gap-6 md:gap-2 ">

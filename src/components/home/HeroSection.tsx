@@ -1,9 +1,9 @@
 import React from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
-import { BottomGlow, GradientText, TerGradientText } from "../../pages/Home";
 import PrimaryButton, { PrimaryButtonLight } from "../ui/Buttons/Buttons";
 import { SparklesCore } from "../ui/Sparkles";
 import bg from '../assets/bg2.png'
+import { BottomGlow, GradientText, TerGradientText } from "../../utils/utils";
 type Props = {};
 
 export default function HeroSection({}: Props) {

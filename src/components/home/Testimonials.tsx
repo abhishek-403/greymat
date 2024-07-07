@@ -1,4 +1,4 @@
-import { BottomGlow, GradientText } from "../../pages/Home";
+import { PrimaryHeading } from "../../utils/utils";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 type Props = {};
@@ -6,13 +6,8 @@ type Props = {};
 export default function Testimonials({}: Props) {
   return (
     <div className="flex flex-col items-center justify-center overflow-x-hidden">
-      <div>
-        <h1 className="w-fit">
-          <GradientText>Testimonials</GradientText>
-          <BottomGlow />
-          <h6>Our happy clients</h6>
-        </h1>
-      </div>
+     
+      <PrimaryHeading head="Testimonials" subhead="Our happy Clients"/>
 
       <div className="h-[40rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards

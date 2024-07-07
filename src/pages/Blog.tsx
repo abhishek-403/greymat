@@ -1,7 +1,6 @@
 import blogImg1 from "../components/assets/blogimg1.png";
 import { TerButton } from "../components/ui/Buttons/Buttons";
-import { CommonHeading } from "./About";
-import { BottomGlow, SecGadientText } from "./Home";
+import { BottomGlow, CommonHeading, SecGadientText } from "../utils/utils";
 type Props = {};
 
 export default function BlogPage({}: Props) {
@@ -15,7 +14,7 @@ export default function BlogPage({}: Props) {
         </SecGadientText>
         <BottomGlow />
         {/* <Careers hideHeading /> */}
-        <div className=" flex flex-col gap-4 md:gap-8 w-full items-center justify-center">
+        <div className=" flex flex-col gap-6 md:gap-8 w-full items-center justify-center">
           <BlogPreviewCard />
           <BlogPreviewCard />
           <BlogPreviewCard />
@@ -28,7 +27,7 @@ export default function BlogPage({}: Props) {
 
 function BlogPreviewCard() {
   return (
-    <div className="w-[80%] flex-col md:flex-row-reverse flex gap-4 text-neutral-0 bg-gradient-to-tr from-primary-120 via-primary-80 to-primary-40 p-4 md:p-8 rounded-lg">
+    <div className="w-[90%]  flex-col md:flex-row-reverse flex gap-4 text-neutral-0 bg-gradient-to-tr from-neutral-90 via-neutral-80 to-neutral-90 p-4 md:p-8 rounded-lg">
       <div className="flex-1 flex items-center justify-center">
         <img src={blogImg1} alt="img" className="rounded-lg" />
       </div>

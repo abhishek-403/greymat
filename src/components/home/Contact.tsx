@@ -1,6 +1,6 @@
 import React from "react";
-import { BottomGlow, GradientText } from "../../pages/Home";
 import { cn } from "../../utils/cn";
+import { PrimaryHeading } from "../../utils/utils";
 import contactimg from "../assets/contactimg.png";
 import { Input, TextArea } from "../ui/input";
 import { Label } from "../ui/label";
@@ -12,13 +12,8 @@ export default function Contact({ hideHeading }: Props) {
   return (
     <div className=" w-full  flex-col gap-10 text-white px-10 mb-10 flex  items-center py-6">
       {!hideHeading && (
-        <div>
-          <h1 className="">
-            <GradientText>Contact Us</GradientText>
-            <BottomGlow />
-          </h1>
-          <h6 className="">React out to us</h6>
-        </div>
+       
+        <PrimaryHeading head="Contact Us" subhead="Reach out to us" />
       )}
       <div className="transition-all duration-75 flex gap-10 sm:gap-4 items-center justify-between flex-col lg:flex-row ">
         <div data-aos="fade-right" className="">

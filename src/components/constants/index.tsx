@@ -5,15 +5,12 @@ import growbuisnessimg from "../assets/growbuisness.png";
 import ecommerceimg from "../assets/ecommerceimg.png";
 import enterpriseimg from "../assets/enterpriseimg.png";
 import startupimg from "../assets/stratupimg.png";
+
 export const TABS: TabType[] = [
   {
     name: "Home",
     link: "/",
   },
-  // {
-  //   name: "Service",
-  //   link: "/services",
-  // },
   {
     name: "About",
     link: "/about",
@@ -38,7 +35,7 @@ export const NESTED_TABS: TabType[] = [
   },
 ];
 
-export const services: CardProps[] = [
+export const servicescard: CardProps[] = [
   {
     img: startupimg,
     title: "Web for startup",
@@ -77,3 +74,10 @@ export const services: CardProps[] = [
       "Give your website a fresh new look that attracts more customers. We can help your website get a complete redo with a whole new set of features and colours. ",
   },
 ];
+
+export const SOCIAL_MEDIA_URLS = {
+  INSTAGRAM:
+    "https://www.instagram.com/greymat.digitalagency?igsh=ZGcxYXEwZnBwYXJk&utm_source=qr",
+  TWITTER: "https://x.com/GreyMat_Digital?t=y81Dd6WSDLiY7cVYHEA8mA&s=08",
+  LINKEDIN: "https://www.linkedin.com/company/greymat-digitalagency/",
+};

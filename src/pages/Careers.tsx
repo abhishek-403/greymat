@@ -1,5 +1,5 @@
 import Careers from "../components/home/Careers";
-import { CommonHeading } from "./About";
+import { CommonHeading } from "../utils/utils";
 
 type Props = {};
 

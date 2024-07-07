@@ -6,7 +6,7 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
-import { BottomGlow, GradientText } from "../../pages/Home";
+import { PrimaryHeading } from "../../utils/utils";
 import faqimg from "../assets/faq.png";
 
 type Props = {};
@@ -17,14 +17,8 @@ type AccordionCardProps = {
 
 export default function FAQS({}: Props) {
   return (
-    <div className="flex flex-col mb-10 w-full items-center gap-10 py-6" >
-      <div className="w-fit">
-        <h1 className="">
-          <GradientText>FAQ's</GradientText>
-          <BottomGlow className="" />
-        </h1>
-        <h6 className="">Still having doubts</h6>
-      </div>
+    <div className="flex flex-col mb-10 w-full items-center gap-10 py-6">
+      <PrimaryHeading head="FAQ's" subhead="Still having doubts" />
       <div
         data-aos="fade-right"
         className="relative w-full text-white  item-center flex gap-10 sm:gap-10 lg:gap-2 lg:flex-row  flex-col-reverse  "

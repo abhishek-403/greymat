@@ -7,13 +7,13 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "../../components/ui/dropdown-menu";
-import { BottomGlow } from "../../pages/Home";
 import { cn } from "../../utils/cn";
 import logo from "../assets/logo-original-removebg.png";
 import { NESTED_TABS, TABS } from "../constants";
 import MobileNav from "./MobileNav";
 
 import { Link, useLocation } from "react-router-dom";
+import { BottomGlow } from "../../utils/utils";
 type Props = {};
 
 export default function Navbar({}: Props) {

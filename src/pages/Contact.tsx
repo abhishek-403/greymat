@@ -1,5 +1,5 @@
 import Contact from "../components/home/Contact";
-import { CommonHeading } from "./About";
+import { CommonHeading } from "../utils/utils";
 
 type Props = {};
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { BottomGlow, GradientText } from "../../pages/Home";
 import { cn } from "../../utils/cn";
+import { PrimaryHeading } from "../../utils/utils";
 import contactimg from "../assets/contactimg.png";
 import { Input, TextArea } from "../ui/input";
 import { Label } from "../ui/label";
@@ -11,15 +11,7 @@ interface Props {
 export default function Careers({ hideHeading }: Props) {
   return (
     <div className=" w-full  flex-col gap-10 text-white  mb-10 flex  items-center py-6">
-      {!hideHeading && (
-        <div>
-          <h1 className="">
-            <GradientText>Career</GradientText>
-            <BottomGlow />
-          </h1>
-          <h6 className="">Work with us</h6>
-        </div>
-      )}
+      {!hideHeading && <PrimaryHeading head="Career" subhead="Work with us" />}
       <div className="transition-all duration-75 flex gap-10 sm:gap-4 items-center justify-between flex-col lg:flex-row ">
         <div data-aos="fade-right" className="">
           <img

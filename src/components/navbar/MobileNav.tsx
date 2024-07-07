@@ -26,7 +26,7 @@ export default function MobileNav({
     <div className="flex">
       <ul
         className={cn(
-          "bg-[#121212] w-full px-10 py-4 rounded-lg border-2 border-neutral-80 flex-col gap-4 z-10 hidden absolute text-lg cursor-pointer mr-10 opacity-0 top-[-100px] pt-10 items-center text-center",
+          "bg-neutral-100 w-full px-10 py-4 rounded-lg border-2 border-neutral-80 flex-col gap-4 z-10 hidden absolute text-lg cursor-pointer mr-10 opacity-0 top-[-100px] pt-10 items-center text-center",
           isOpen && `mobileNavVisible`
         )}
       >
