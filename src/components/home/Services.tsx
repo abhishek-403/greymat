@@ -1,14 +1,14 @@
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Tilt from "react-parallax-tilt";
 import "swiper/css";
-import PrimaryButton from "../ui/Buttons/Buttons";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { CardProps } from "../constants/types";
+import { cn } from "../../utils/cn";
+import { PrimaryHeading, SecGadientText } from "../../utils/utils";
 import {
   default_service_head,
   default_service_subhead,
 } from "../constants/service-page";
-import { PrimaryHeading, SecGadientText } from "../../utils/utils";
-import { cn } from "../../utils/cn";
+import { CardProps } from "../constants/types";
+import PrimaryButton from "../ui/Buttons/Buttons";
 
 type Props = {
   cards: CardProps[];
@@ -33,7 +33,7 @@ export default function Services({ cards, heading, subheading,className }: Props
             <div
               className="mx-auto px-3 md:px-0"
               data-aos-duration="1000"
-              data-aos-delay={i * 100 + 200}
+              data-aos-delay={i * 50 + 100}
               data-aos="fade-up"
               data-inf
               key={i}

@@ -17,7 +17,7 @@ export default function Footer({}: Props) {
           <MdOutlineMail className="text-blue-400" size={32} />
           Get in touch
         </p>
-        <p className="text-lg md:text-lg text-secondary py-4 px-6 hover:bg-primary-80 hover:text-white cursor-pointer font-bold bg-neutral-80 rounded-lg">
+        <p className="text-sm sm:text-base md:text-lg text-secondary py-4 px-6 hover:bg-primary-80 hover:text-white cursor-pointer font-bold bg-neutral-80 rounded-lg">
           graymat.digital@gmail.com
         </p>
       </div>
@@ -26,7 +26,7 @@ export default function Footer({}: Props) {
           <MdOutlineFolderCopy className="text-red-400" size={32} />
           Pages
         </div>
-        <div className="flex gap-6 items-center text-base md:text-lg  font-semibold py-4 px-6">
+        <div className="flex gap-6 flex-wrap items-center text-base md:text-lg  font-semibold py-4 px-6">
           <Link className="hover:text-primary-40 text-neutral-20" to={"/"}>
             Home
           </Link>

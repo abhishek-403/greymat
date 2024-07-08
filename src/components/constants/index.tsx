@@ -1,10 +1,10 @@
-import { CardProps, TabType } from "./types";
-import webimg from "../assets/webimg.png";
-import webappimg from "../assets/webappimg.png";
-import growbuisnessimg from "../assets/growbuisness.png";
 import ecommerceimg from "../assets/ecommerceimg.png";
 import enterpriseimg from "../assets/enterpriseimg.png";
+import growbuisnessimg from "../assets/growbuisness.png";
 import startupimg from "../assets/stratupimg.png";
+import webappimg from "../assets/webappimg.png";
+import webimg from "../assets/webimg.png";
+import { CardProps, TabType } from "./types";
 
 export const TABS: TabType[] = [
   {
@@ -81,3 +81,6 @@ export const SOCIAL_MEDIA_URLS = {
   TWITTER: "https://x.com/GreyMat_Digital?t=y81Dd6WSDLiY7cVYHEA8mA&s=08",
   LINKEDIN: "https://www.linkedin.com/company/greymat-digitalagency/",
 };
+
+
+export const POPUP_TIME = 5000

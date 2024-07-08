@@ -54,7 +54,7 @@ export default function EachServicePage({}: Props) {
         />
         <div
           data-aos="fade-right"
-          className="flex flex-col w-full flex-1 text-neutral-0 gap-4 text-left"
+          className="flex flex-col w-full flex-1 text-neutral-0 gap-4 md:gap-8 text-left"
         >
           <div className="md:text-4xl text-2xl font-bold">
             {pageDetails.heroHead}
