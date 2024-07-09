@@ -12,7 +12,7 @@ export default function PopUp({
     <div className="fixed text-white flex items-center justify-center  w-screen h-screen overflow-auto z-[130]  bg-neutral-90 top-0 right-0 bg-opacity-90 ">
       <div className="md:max-w-[600px] h-[90vh]  flex gap-4 items-center flex-col justify-center">
         <div className="w-full flex items-center justify-center text-2xl font-bold relative">
-          Join us now
+          Get a quote
           <MdClose
             onClick={() => {
               setShow(false);

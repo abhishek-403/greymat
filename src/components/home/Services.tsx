@@ -14,12 +14,22 @@ type Props = {
   cards: CardProps[];
   heading?: string;
   subheading?: string;
-  className?:string;
+  className?: string;
 };
 
-export default function Services({ cards, heading, subheading,className }: Props) {
+export default function Services({
+  cards,
+  heading,
+  subheading,
+  className,
+}: Props) {
   return (
-    <div className={cn("text-white  mb-10 w-full flex  items-center flex-col gap-10",className)}>
+    <div
+      className={cn(
+        "text-white  mb-10 w-full flex  items-center flex-col gap-10",
+        className
+      )}
+    >
       <div className="my-6 ">
         <PrimaryHeading
           head={heading ?? default_service_head}
@@ -33,9 +43,8 @@ export default function Services({ cards, heading, subheading,className }: Props
             <div
               className="mx-auto px-3 md:px-0"
               data-aos-duration="1000"
-              data-aos-delay={i * 50 + 100}
+              data-aos-delay={i * 150 + 100}
               data-aos="fade-up"
-              data-inf
               key={i}
             >
               <Card {...prop} />
@@ -60,7 +69,7 @@ export function Card({ img, title, brief, link, btn_text }: CardProps) {
         boxShadow:
           "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
       }}
-      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] lg:w-[100%] min-h-[480px] rounded-xl border-2 border-[#343434] p-6 gap-4 aos-animate h-full"
+      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] lg:w-[100%] min-h-[480px] rounded-xl border-2 border-[#343434] p-6 gap-4 aos-animate h-[520px]"
     >
       <div className="flex items-center justify-center p-2 object-cover ">
         <img

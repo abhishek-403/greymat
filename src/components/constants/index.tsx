@@ -83,4 +83,5 @@ export const SOCIAL_MEDIA_URLS = {
 };
 
 
-export const POPUP_TIME = 5000
+export const POPUP_TIME_ONE = 30000
+export const POPUP_TIME_TWO = 120000

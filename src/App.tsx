@@ -1,7 +1,7 @@
 import AOS from "aos";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { POPUP_TIME } from "./components/constants";
+import { POPUP_TIME_ONE, POPUP_TIME_TWO } from "./components/constants";
 import Footer from "./components/home/Footer";
 import PopUp from "./components/home/PopUp";
 import Navbar from "./components/navbar/Navbar";
@@ -27,13 +27,19 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+   
+    const showPopupAfter30Sec = setTimeout(() => {
       setShowPopup(true);
-      document.body.style.overflow = "hidden";
-    }, POPUP_TIME);
+    }, POPUP_TIME_ONE); 
+    const showPopupAfter2Min = setTimeout(() => {
+      setShowPopup(true);
+    }, POPUP_TIME_TWO); 
+
     return () => {
-      clearTimeout(timer);
+      clearTimeout(showPopupAfter30Sec);
+      clearTimeout(showPopupAfter2Min);
     };
+   
   }, []);
   return (
     <div className="min-h-screen max-w-screen flex flex-col relative">
