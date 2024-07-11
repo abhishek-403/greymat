@@ -11,8 +11,9 @@ import CareersPage from "./pages/Careers";
 import ContactPage from "./pages/Contact";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/Services";
-const EachServicePage = lazy(
-  () => import("./components/services/EachServicePage")
+import ChatBotComponet from "./components/constants/chatbot/ChatBotComponet";
+const EachServicePage = lazy(() =>
+  import("./components/services/EachServicePage")
 );
 
 function App() {
@@ -27,24 +28,25 @@ function App() {
   }, []);
 
   useEffect(() => {
-   
     const showPopupAfter30Sec = setTimeout(() => {
       setShowPopup(true);
-    }, POPUP_TIME_ONE); 
+    }, POPUP_TIME_ONE);
     const showPopupAfter2Min = setTimeout(() => {
-      setShowPopup(true);
-    }, POPUP_TIME_TWO); 
+      if (!showPopup) {
+        setShowPopup(true);
+      }
+    }, POPUP_TIME_TWO);
 
     return () => {
       clearTimeout(showPopupAfter30Sec);
       clearTimeout(showPopupAfter2Min);
     };
-   
   }, []);
+
   return (
     <div className="min-h-screen max-w-screen flex flex-col relative">
       {showPopup && <PopUp setShow={setShowPopup} />}
-      <div className="sticky top-[2px]  w-full z-[100] sm:px-3 lg:px-12 px-2">
+      <div className="sticky top-[0px]  w-full z-[100] sm:px-3 lg:px-12 px-2">
         <Navbar />
       </div>
       <div className="relative sm:px-3 lg:px-24 px-3">
@@ -67,6 +69,10 @@ function App() {
       </div>
       <div className="mt-auto">
         <Footer />
+      </div>
+
+      <div className="fixed bottom-2 z-[100] right-4 ">
+        <ChatBotComponet />
       </div>
     </div>
   );

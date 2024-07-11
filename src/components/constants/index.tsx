@@ -30,7 +30,7 @@ export const NESTED_TABS: TabType[] = [
     link: "/services",
   },
   {
-    name: "Blog",
+    name: "Blogs",
     link: "/blog",
   },
 ];
@@ -82,6 +82,5 @@ export const SOCIAL_MEDIA_URLS = {
   LINKEDIN: "https://www.linkedin.com/company/greymat-digitalagency/",
 };
 
-
-export const POPUP_TIME_ONE = 30000
-export const POPUP_TIME_TWO = 120000
+export const POPUP_TIME_ONE = 30000;
+export const POPUP_TIME_TWO = 120000;

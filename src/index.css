@@ -44,32 +44,27 @@ body {
   filter: drop-shadow(0px 0px 50px rgb(112, 112, 112));
 }
 
-
 .mobileNavVisible {
   display: flex;
   top: -20px;
-  transition: all .1s ease-out;
+  transition: all 0.1s ease-out;
   visibility: "visible";
   opacity: 100;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: black;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #1b1b1b;
   border-radius: 20px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #252525;
 }
