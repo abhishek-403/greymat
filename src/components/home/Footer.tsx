@@ -11,7 +11,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <div className="text-neutral-0 flex-wrap md:items-center justify-between bg-neutral-90 bg-opacity-70 rounded-md px-10 md:px-20 py-8 flex md:flex-row flex-col gap-16 items-start mt-32 font-poppins">
+    <div className="text-neutral-0 flex-wrap md:items-center justify-between bg-neutral-90 bg-opacity-70 rounded-md px-10 md:px-20 py-8 flex md:flex-row flex-col gap-16 items-start mt-[200px] font-poppins">
       <div className="flex  gap-4 flex-col ">
         <p className="flex gap-4 font-bold text-lg md:text-2xl items-center  ">
           <MdOutlineMail className="text-blue-400" size={32} />

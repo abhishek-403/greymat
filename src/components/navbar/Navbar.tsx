@@ -33,7 +33,7 @@ export default function Navbar({}: Props) {
   }
   return (
     <div className="flex flex-col  ">
-      <div className="flex border border-[#212121] bg-black justify-between px-3 py-2 sm:px-10 items-center  top-0 rounded-full ">
+      <div className="flex border-2  border-neutral-80 bg-black justify-between px-3 py-2 sm:px-10 items-center  rounded-full ">
         <Link to={"/"}>
           <img
             src={logo}

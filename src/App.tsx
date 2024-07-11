@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="min-h-screen max-w-screen flex flex-col relative">
       {showPopup && <PopUp setShow={setShowPopup} />}
-      <div className="sticky top-0  w-full z-[100] sm:px-3 lg:px-12 px-2">
+      <div className="sticky top-[2px]  w-full z-[100] sm:px-3 lg:px-12 px-2">
         <Navbar />
       </div>
       <div className="relative sm:px-3 lg:px-24 px-3">

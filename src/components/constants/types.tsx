@@ -17,3 +17,12 @@ export type ServicePageProps = {
   cardsSubHead: string;
   cards: CardProps[];
 };
+
+export interface BlogCard {
+  title:string;
+  description:string;
+  link:string;
+  image:string;
+  date:string;
+  category:string
+}
