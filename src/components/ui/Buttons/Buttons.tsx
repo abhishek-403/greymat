@@ -40,7 +40,7 @@ export function PrimaryButtonLight({ title, icon, link }: Props) {
 export function TerButton({ title, link, className }: Props) {
   return (
     <section className={"buttons"}>
-      <div className={cn("container", className)}>
+      <div className={cn("container2", className)}>
         <Link to={link ?? "/"} className="btn btn-5">
           {title}
         </Link>
@@ -52,7 +52,7 @@ export function TerButton({ title, link, className }: Props) {
 export function SecondaryButton({}: Props) {
   return (
     <section className="buttons">
-      <div className="container">
+      <div className="container2">
         <a href="https://twitter.com/Dave_Conner" className="btn btn-3">
           Hover
         </a>

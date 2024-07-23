@@ -17,9 +17,9 @@ export default function Home({}: Props) {
         <div className="gap-6 flex flex-col relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 overflow-hidden ">
           <Services cards={servicescard} />
           <About />
-          <Contact />
-          <FAQS />
           <Testimonials />
+          <FAQS />
+          <Contact />
         </div>
       </div>
     </div>

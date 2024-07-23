@@ -19,6 +19,7 @@ export default {
       colors: {
         neutral: {
           100: "#000000",
+          95: "#0F0F0F",
           90: "#1A1A1A",
           80: "#333333",
           70: "#4D4D4D",
@@ -47,7 +48,6 @@ export default {
         secondary: {
           DEFAULT: "#E2CBFF",
         },
-       
       },
       dropShadow: {
         sm: "0 1px 1px rgba(255,255,255,0.8)",
@@ -91,7 +91,19 @@ export default {
   },
   plugins: [
     addVariablesForColors,
-    function ({ matchUtilities, theme }: any) {
+    function({ addUtilities }) {
+      addUtilities({
+        ".scrollbar-hide": {
+          "-webkit-overflow-scrolling": "touch",
+          "::-webkit-scrollbar": {
+            display: "none",
+          },
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+        },
+      });
+    },
+    function({ matchUtilities, theme }: any) {
       matchUtilities(
         {
           "bg-grid": (value: any) => ({

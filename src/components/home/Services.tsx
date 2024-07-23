@@ -1,6 +1,9 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Tilt from "react-parallax-tilt";
 import "swiper/css";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 import { cn } from "../../utils/cn";
 import { PrimaryHeading, SecGadientText } from "../../utils/utils";
 import {
@@ -8,8 +11,8 @@ import {
   default_service_subhead,
 } from "../constants/service-page";
 import { CardProps } from "../constants/types";
+import "../styles/services.css";
 import PrimaryButton from "../ui/Buttons/Buttons";
-
 type Props = {
   cards: CardProps[];
   heading?: string;
@@ -23,10 +26,28 @@ export default function Services({
   subheading,
   className,
 }: Props) {
+  const breakpoints = {
+    420: {
+      spaceBetween: 5,
+      slidesPerView: 1,
+    },
+    768: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+    },
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+    1280: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+    },
+  };
   return (
     <div
       className={cn(
-        "text-white  mb-10 w-full flex  items-center flex-col gap-10",
+        "text-white  mb-10 w-full flex  items-center flex-col gap-10 scrollbar-hide ",
         className
       )}
     >
@@ -36,7 +57,7 @@ export default function Services({
           subhead={subheading ?? default_service_subhead}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  gap-10 items-center justify-center mx-auto w-full   ">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  gap-10 items-center justify-center mx-auto w-full   ">
         {cards.map((ser, i) => {
           let prop = { ...ser, i };
           return (
@@ -51,6 +72,27 @@ export default function Services({
             </div>
           );
         })}
+      </div> */}
+
+      {/* <div className="relative flex items-center"> */}
+      <div className="container relative mx-auto md:px-4 pb-12  gap-10 w-full ">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          breakpoints={breakpoints}
+          navigation
+          pagination={{ clickable: true , el:'.swiper-pagination'}}
+          className="mySwiper"
+        >
+          {cards.map((ser, i) => {
+            let prop = { ...ser, i };
+            return (
+              <SwiperSlide className="mx-auto px-3 md:px-0" key={i}>
+                <Card {...prop} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <div className="swiper-pagination absolute bottom-0 left-1/2 mx-auto  pb-4 "></div>
       </div>
     </div>
   );
@@ -69,7 +111,7 @@ export function Card({ img, title, brief, link, btn_text }: CardProps) {
         boxShadow:
           "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
       }}
-      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] lg:w-[100%] min-h-[480px] rounded-xl border-2 border-[#343434] p-6 gap-4 aos-animate h-[520px]"
+      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] md:w-[340px] lg:w-[100%]  min-h-[480px] h-[520px] rounded-xl border-2 border-[#343434] p-6 gap-4 aos-animate  "
     >
       <div className="flex items-center justify-center p-2 object-cover ">
         <img

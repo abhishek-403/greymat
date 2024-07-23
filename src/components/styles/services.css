@@ -1,0 +1,47 @@
+
+.swiper-button-next, .swiper-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%; 
+    color: white; 
+    font-size: 20px; 
+    z-index:200;
+  }
+  
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px; 
+  }
+  
+  .swiper-button-next {
+    right: 2px; 
+  }
+  
+  .swiper-button-prev {
+    left: 2px; 
+  }
+  
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-pagination {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .swiper-pagination-bullet {
+    background-color: #e9e9e9; /* Change to your desired dot color */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #fff; /* Change to your desired active dot color */
+  }
