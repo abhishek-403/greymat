@@ -25,7 +25,7 @@ export default function Contact({ hideHeading }: Props) {
         </div>
         <div
           data-aos="fade-left"
-          className="w-[90vw] sm:w-[80%] px-2 sm:px-14 "
+          className="w-[90vw] xl:w-[90%] px-2 sm:px-14 "
         >
           <ContactBox />
         </div>
@@ -40,7 +40,7 @@ export function ContactBox() {
     console.log("Form submitted");
   };
   return (
-    <div className="py-2 w-[100%] border border-[#343434]  mx-auto rounded-none md:rounded-2xl px-4 md:px-8 shadow-input bg-white dark:bg-black">
+    <div className="py-2 w-full border border-[#343434]  mx-auto rounded-none md:rounded-2xl px-4 md:px-8 shadow-input bg-white dark:bg-black">
       <form className="my-8 flex flex-col gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col  md:flex-row space-y-10 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>

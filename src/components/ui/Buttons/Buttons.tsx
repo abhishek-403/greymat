@@ -49,14 +49,3 @@ export function TerButton({ title, link, className }: Props) {
   );
 }
 
-export function SecondaryButton({}: Props) {
-  return (
-    <section className="buttons">
-      <div className="container2">
-        <a href="https://twitter.com/Dave_Conner" className="btn btn-3">
-          Hover
-        </a>
-      </div>
-    </section>
-  );
-}

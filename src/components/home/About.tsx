@@ -1,7 +1,8 @@
 import { BottomGlow, PrimaryHeading } from "../../utils/utils";
-import aboutImg2 from "../assets/aboutimg2-removebg.png";
+import aboutImg2 from "../assets/aboutimg2.png";
 import Tilt from "react-parallax-tilt";
-import aboutImg1 from "../assets/aboutimg3.jpg";
+import aboutImg1 from "../assets/aboutimg3.png";
+import aboutImg3 from "../assets/aboutimg.png";
 type Props = { hideHeading?: boolean };
 
 function About({ hideHeading }: Props) {
@@ -38,9 +39,9 @@ function About({ hideHeading }: Props) {
             className="flex-1 flex items-center justify-center px-2"
           >
             <img
-              src={aboutImg1}
+              src={aboutImg3}
               alt="aboutimg"
-              className="rounded-[30px] sm:p-4"
+              className="h-[400px] object-cover rounded-[30px] sm:p-4"
             />
           </div>
         </TiltWrapper>
@@ -53,7 +54,7 @@ function About({ hideHeading }: Props) {
             <img
               src={aboutImg2}
               alt="aboutim2"
-              className="rounded-[30px] sm:p-4"
+              className="h-[400px] object-cover rounded-[30px] sm:p-4"
             />
           </div>
 
@@ -110,7 +111,7 @@ function About({ hideHeading }: Props) {
             <img
               src={aboutImg1}
               alt="aboutimg"
-              className="rounded-[30px] sm:p-4"
+              className="h-[400px] object-cover rounded-[30px] sm:p-4"
             />
           </div>
         </TiltWrapper>
@@ -124,8 +125,8 @@ function TiltWrapper({ children }: { children: React.ReactNode }) {
     <Tilt
       glareBorderRadius="10"
       glarePosition="all"
-      tiltMaxAngleY={.1}
-      tiltMaxAngleX={.1}
+      tiltMaxAngleY={0.1}
+      tiltMaxAngleX={0.1}
       glareMaxOpacity={0.1}
       glareEnable
       style={{

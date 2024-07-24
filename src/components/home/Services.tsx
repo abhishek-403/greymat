@@ -74,7 +74,6 @@ export default function Services({
         })}
       </div> */}
 
-      {/* <div className="relative flex items-center"> */}
       <div className="container relative mx-auto md:px-4 pb-12  gap-10 w-full ">
         <Swiper
           modules={[Navigation, Pagination]}
@@ -86,7 +85,7 @@ export default function Services({
           {cards.map((ser, i) => {
             let prop = { ...ser, i };
             return (
-              <SwiperSlide className="mx-auto px-3 md:px-0" key={i}>
+              <SwiperSlide className="mx-auto px-3 md:px-0 flex items-center justify-center w-full" key={i}>
                 <Card {...prop} />
               </SwiperSlide>
             );
@@ -111,7 +110,7 @@ export function Card({ img, title, brief, link, btn_text }: CardProps) {
         boxShadow:
           "0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px var(--accents-1)",
       }}
-      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] md:w-[340px] lg:w-[100%]  min-h-[480px] h-[520px] rounded-xl border-2 border-[#343434] p-6 gap-4 aos-animate  "
+      className="cursor-pointer  transition-all duration-75 flex flex-col sm:w-[400px] md:w-[340px] lg:w-[100%]  min-h-[480px] h-[520px] rounded-xl border-2 border-[#343434] p-6 gap-4 aos-animate "
     >
       <div className="flex items-center justify-center p-2 object-cover ">
         <img

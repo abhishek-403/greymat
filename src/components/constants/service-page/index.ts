@@ -2,7 +2,7 @@ import webappimg from "../../assets/webappimg.png";
 import growbuisnessimg from "../../assets/growbuisness.png";
 import ecommerceimg from "../../assets/ecommerceimg.png";
 import enterpriseimg from "../../assets/enterpriseimg.png";
-import startupimg from "../../assets/stratupimg.png";
+import startupimg from "../../assets/startupimg.png";
 import { CardProps, ServicePageProps } from "../types";
 
 export const serviceRoutes = {

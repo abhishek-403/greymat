@@ -100,7 +100,7 @@ const TextComponent = () => {
   );
 };
 
-function Arrow() {
+export function Arrow() {
   return (
     <svg
       width="20"

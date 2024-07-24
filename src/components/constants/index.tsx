@@ -1,7 +1,7 @@
 import ecommerceimg from "../assets/ecommerceimg.png";
 import enterpriseimg from "../assets/enterpriseimg.png";
 import growbuisnessimg from "../assets/growbuisness.png";
-import startupimg from "../assets/stratupimg.png";
+import startupimg from "../assets/startupimg.png";
 import webappimg from "../assets/webappimg.png";
 import webimg from "../assets/webimg.png";
 import { CardProps, TabType } from "./types";

@@ -23,7 +23,7 @@ export default function FAQS({}: Props) {
         data-aos="fade-right"
         className="relative w-full text-white  item-center flex gap-10 sm:gap-10 lg:gap-2 lg:flex-row  flex-col-reverse  "
       >
-        <div className=" max-h-[40rem] w-[100%] sm:max-h-[30rem] overflow-auto overflow-x-hidden px-4 ">
+        <div className="flex-1 flex max-h-[40rem] w-[100%] sm:max-h-[30rem] overflow-auto overflow-x-hidden px-4 ">
           <Accordion
             defaultIndex={[0]}
             allowMultiple
@@ -34,11 +34,11 @@ export default function FAQS({}: Props) {
             ))}
           </Accordion>
         </div>
-        <div data-aos="fade-left" className="flex items-center justify-center">
+        <div data-aos="fade-left" className="flex-1 flex items-center justify-center">
           <img
             src={faqimg}
             alt=""
-            className="lg:max-w-[40vw] max-w-[300px] sm:max-w-[50vw] "
+            className="h-[400px] object-cover  "
           />
         </div>
       </div>
